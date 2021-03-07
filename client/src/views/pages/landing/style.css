@@ -1,0 +1,251 @@
+
+		.bg-primary {
+			background-color: #02171a !important;
+		}
+
+		#mainHeader.header.stiky {
+			background: #9eae3a;
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+		}
+
+		.copyright-text>p {
+			color: white;
+		}
+
+		.widget_links a,
+		.widget_meta a,
+		.widget_nav_menu a,
+		.widget_pages a,
+		.widget_recent_comments a,
+		.widget_recent_entries a,
+		.widget_product_categories a {
+			color: #9eae3a;
+		}
+
+		.user-register-area .remember-and-password .btn-password {
+			color: #9eae3a;
+		}
+
+		.btn-primary:before {
+			background: #9eae3a;
+		}
+
+		.user-register-area .login-form-remember label span a {
+			color: #9eae3a;
+		}
+
+		p {
+			color: cadetblue;
+		}
+
+		.btn-white {
+			background-color: #9eae3a;
+			color: white;
+		}
+
+		element.style {
+			color: #9eae3a;
+		}
+
+
+		.navbar-nav {
+			background-color: #9eae3a;
+		}
+
+		.bg-overlay-primary:before {
+			background-color: #02171a;
+		}
+
+		.investor-item .invest-amount {
+			background-color: #9eae3a;
+		}
+
+		.text-block {
+			background-color: #9eae3a;
+		}
+
+		.heading-title h2 {
+			color: #02171a;
+		}
+
+		#transaction {
+			background-color: #02171a;
+		}
+
+		#feature {
+			background-color: #02171a;
+		}
+
+		#faq {
+			background-color: #02171a;
+		}
+
+		.buttonGet {
+			background-color: #9eae3a;
+			color: white;
+		}
+
+		#testimonial .slick-arrow i {
+			position: inherit;
+			z-index: 99;
+			display: block;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			line-height: 40px;
+			font-size: 18px;
+			background: -webkit-linear-gradient(to right, #86ff2f, #4bffb1);
+			background: -moz-linear-gradient(to right, #86ff2f, #4bffb1);
+			background: linear-gradient(to right, #86ff2f, #4bffb1);
+			-webkit-background-clip: text;
+			-moz-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			-moz-text-fill-color: transparent;
+			-webkit-transition: all .3s ease-in-out;
+			-moz-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
+		}
+
+        /* contact page */
+
+        .bg-primary {
+            background-color: #02171a !important;
+          }
+    
+          #mainHeader.header.stiky {
+            background: #9eae3a;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+          }
+    
+          .copyright-text > p {
+            color: white;
+          }
+    
+          .widget_links a,
+          .widget_meta a,
+          .widget_nav_menu a,
+          .widget_pages a,
+          .widget_recent_comments a,
+          .widget_recent_entries a,
+          .widget_product_categories a {
+            color: #9eae3a;
+          }
+    
+          .user-register-area .remember-and-password .btn-password {
+            color: #9eae3a;
+          }
+    
+          .btn-primary:before {
+            background: #9eae3a;
+          }
+    
+          .user-register-area .login-form-remember label span a {
+            color: #9eae3a;
+          }
+    
+          p {
+            color: cadetblue;
+          }
+    
+          .btn-white {
+            background-color: #9eae3a;
+            color: white;
+          }
+    
+          element.style {
+            color: #9eae3a;
+          }
+    
+          .navbar-nav {
+            background-color: #9eae3a;
+          }
+    
+          .bg-overlay-primary:before {
+            background-color: #02171a;
+          }
+    
+          .investor-item .invest-amount {
+            background-color: #9eae3a;
+          }
+
+
+          /* about us page */
+
+          .bg-primary {
+            background-color: #02171a !important;
+          }
+    
+          #mainHeader.header.stiky {
+            background: #9eae3a;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+          }
+    
+          .copyright-text > p {
+            color: white;
+          }
+    
+          .widget_links a,
+          .widget_meta a,
+          .widget_nav_menu a,
+          .widget_pages a,
+          .widget_recent_comments a,
+          .widget_recent_entries a,
+          .widget_product_categories a {
+            color: #9eae3a;
+          }
+    
+          .user-register-area .remember-and-password .btn-password {
+            color: #9eae3a;
+          }
+    
+          .btn-primary:before {
+            background: #9eae3a;
+          }
+    
+          .user-register-area .login-form-remember label span a {
+            color: #9eae3a;
+          }
+    
+          p {
+            color: cadetblue;
+          }
+    
+          .btn-white {
+            background-color: #9eae3a;
+            color: white;
+          }
+    
+          element.style {
+            color: #9eae3a;
+          }
+    
+          .navbar-nav {
+            background-color: #9eae3a;
+          }
+    
+          .bg-overlay-primary:before {
+            background-color: #02171a;
+          }
+    
+          .investor-item .invest-amount {
+            background-color: #9eae3a;
+          }
+
+
+          @media screen and (max-width: 767px) {
+            .container .logo-container{
+              width: 135px;
+            }
+              .navbar-toggler-icon {
+                display: inline-block;
+                width: 1.5em;
+                height: 1.5em;
+                vertical-align: middle;
+                content: "";
+                border-radius: 4px;
+                background: white;
+                background-size: 90% 90%;
+                padding: 15px;
+            }           
+           }
+         

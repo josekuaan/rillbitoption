@@ -1,0 +1,9 @@
+
+@media screen and (max-width: 767px) {
+    .c-header {
+        flex-wrap: nowrap;
+    }
+    .c-header-brand {
+        width: 100px;
+    }
+  }
