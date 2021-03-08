@@ -35,7 +35,7 @@ app.use(
       scriptSrc: ["'self'", "'unsafe-inline'",'https://widget.coinlib.io', 'https://coinlib.io','https://unpkg.com','https://translate.google.com','https://translate.googleapis.com','https://secure.trust-provider.com'],
       styleSrc: ["'self'","'unsafe-inline'",'https://fonts.googleapis.com','https://translate.google.com','https://translate.googleapis.com'],
       fontSrc: ["'self'", 'https://maxcdn.bootstrapcdn.com', 'https: data:','https://fonts.googleapis.com'],
-      imgSrc: ["'self'", 'http://www.w3.org', 'https://www.gstatic.com/','https://chart.googleapis.com','https://e-capitaloption.com/','data:'],
+      imgSrc: ["'self'", 'http://www.w3.org', 'https://www.gstatic.com/','https://chart.googleapis.com','https://e-capitaloption.com/','https://secure.trust-provider.com','https://www.positivessl.com','data:'],
       baseUri: ["'self'", 'https://rillbitoption.com'],
     },
   })
