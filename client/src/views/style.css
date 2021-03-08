@@ -203,6 +203,7 @@ footer {
 .gadget > div {
   text-align: center;
   padding-top: 10px;
+  font-size: 30px;
 }
 .button {
   padding: 10px 0px 30px;
@@ -416,7 +417,7 @@ center img {
 }
 
 .whatsapp-icon {
-  margin-top: 16px;
+  margin-top: 10px;
 }
 /* whatsapp widget ends*/
 
@@ -495,5 +496,10 @@ center img {
       bottom: 20px;
       right: 3px;
       font-size: 22px;
+     
+  }
+  .whatsapp-icon {
+    width: 1.5rem!important;
+    margin-top: 0px
   }
 }

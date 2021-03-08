@@ -8,7 +8,7 @@ export default function Aboutus() {
     {/* Start Navigation */}
     <nav className="navbar navbar-expand-lg navbar-light p-0">
       <div className="container">
-        <a href="/"><img src="appassets/newimages/logo1.png" alt="Logo" className="navbar-brand" style={{width: 250, height: 50}} /></a>
+        <a href="/"><img src="appassets/newimages/logo1.png" alt="Logo" className="navbar-brand" style={{width: 176, height: 50}} /></a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
