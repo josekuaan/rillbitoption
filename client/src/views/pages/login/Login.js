@@ -55,7 +55,7 @@ const Login = () => {
 
     axios
       .post(
-        "https://rilibitoption.herokuapp.com/api/user/auth/login",
+        "http://rillbitoption.com/api/user/auth/login",
         data,
         config
       )
