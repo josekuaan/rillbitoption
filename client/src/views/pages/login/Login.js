@@ -56,7 +56,7 @@ const Login = () => {
 
     axios
       .post(
-        `${BASE_URL}api/user/auth/login`,
+        `${BASE_URL}/api/user/auth/login`,
         data,
         config
       )
