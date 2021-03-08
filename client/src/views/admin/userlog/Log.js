@@ -6,6 +6,7 @@ import { WalletContext } from "../../../pageContext";
 
 import "../../style.css";
 import Items from "./Items";
+import BASE_URL from "src/base_url";
 
 export default function Log() {
   const token = Cookies.get("token");
@@ -25,7 +26,7 @@ export default function Log() {
   const fetchData = async () => {
     axios
       .get(
-        `https://rilibitoption.herokuapp.com/api/user/auth/get-users`,
+        `${BASE_URL}/api/user/auth/get-users`,
         config
       )
       .then(function (response) {

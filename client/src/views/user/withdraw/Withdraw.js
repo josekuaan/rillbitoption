@@ -25,6 +25,7 @@ import {
   CSelect,
   CRow,
 } from "@coreui/react";
+import BASE_URL from "src/base_url";
 
 const Withdraw = () => {
   const [collapsed] = React.useState(true);
@@ -83,7 +84,7 @@ const Withdraw = () => {
     console.log("okkkk", data);
     axios({
       method: "post",
-      url: `https://rilibitoption.herokuapp.com/api/investment/create/${userId}`,
+      url: `${BASE_URL}/api/investment/create/${userId}`,
       data,
       headers: config.headers,
     }).then(function (response) {

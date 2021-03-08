@@ -8,10 +8,6 @@ const TheFooter = () => {
         <a href="https://coreui.io" target="_blank" rel="noopener noreferrer">ril-bit-option</a>
         <span className="ml-1">&copy; 2021 bit-option.</span>
       </div>
-      {/* <div className="mfs-auto">
-        <span className="mr-1">Powered by</span>
-        <a href="https://coreui.io/react" target="_blank" rel="noopener noreferrer">ril-bit-option</a>
-      </div> */}
     </CFooter>
   )
 }

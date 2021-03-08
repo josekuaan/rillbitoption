@@ -5,6 +5,7 @@ import Swal from "sweetalert/dist/sweetalert.min.js";
 import { WalletContext } from "../../../pageContext";
 
 import "../../style.css";
+import BASE_URL from "src/base_url";
 
 export default function Content() {
   const { currentuser } = useContext(WalletContext);
@@ -58,7 +59,7 @@ export default function Content() {
     };
     axios({
       method: "put",
-      url: `https://rilibitoption.herokuapp.com/api/user/auth/photo/${userId}`,
+      url: `${BASE_URL}/api/user/auth/photo/${userId}`,
       data: formData,
       headers: config.headers,
     })

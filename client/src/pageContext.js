@@ -1,5 +1,6 @@
 import React, { useState,useEffect,createContext } from 'react'
 import Cookies from 'js-cookie'
+import BASE_URL from './base_url';
 const axios = require('axios');
 
 
@@ -35,7 +36,7 @@ const WalletContext = createContext();
               "Content-Type": "application/json"
         }
          
-          axios.get(`https://rilibitoption.herokuapp.com/api/user/auth/getMe/${userId}`,
+          axios.get(`${BASE_URL}/api/user/auth/getMe/${userId}`,
           config
           )
           .then(function (response) {

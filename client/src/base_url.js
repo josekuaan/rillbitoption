@@ -1,4 +1,4 @@
 
-const base_url="https://rilibitoption.herokuapp.com"
+const BASE_URL="https://rillbitoption.com"
 
-export default  base_url
+export default  BASE_URL

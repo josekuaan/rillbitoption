@@ -21,6 +21,7 @@ import {
   CRow,
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
+import BASE_URL from "src/base_url";
 
 const ForgotPassword = () => {
   const history = useHistory();
@@ -43,7 +44,7 @@ const ForgotPassword = () => {
     console.log(data);
     axios
       .post(
-        "https://rilibitoption.herokuapp.com/api/user/auth/forgot-password",
+        `${BASE_URL}/api/user/auth/forgot-password`,
         data,
         config
       )

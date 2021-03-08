@@ -24,6 +24,7 @@ import {
   CRow,
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
+import BASE_URL from "src/base_url";
 
 const Login = () => {
   const history = useHistory();
@@ -55,7 +56,7 @@ const Login = () => {
 
     axios
       .post(
-        "http://rillbitoption.com/api/user/auth/login",
+        `${BASE_URL}api/user/auth/login`,
         data,
         config
       )

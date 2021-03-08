@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Cookies from "js-cookie";
 
 import { WalletContext } from "../../../pageContext";
+import BASE_URL from "src/base_url";
 
 export default function Items() {
   const { users, setUsers } = useContext(WalletContext);
@@ -21,7 +22,7 @@ export default function Items() {
   const handleDelete = (id) => async () => {
     axios({
       method: "delete",
-      url: `https://rilibitoption.herokuapp.com/api/user/auth/delete/${id}`,
+      url: `${BASE_URL}/api/user/auth/delete/${id}`,
       headers: config.headers,
     })
       .then((response) => {
@@ -43,14 +44,14 @@ export default function Items() {
 
     axios({
       method: "put",
-      url: `https://rilibitoption.herokuapp.com/api/user/auth/update/${id}`,
+      url: `${BASE_URL}/api/user/auth/update/${id}`,
       data,
       headers: config.headers,
     })
       .then((response) => {
         if (response.data.success) {
           console.log(response.data);
-          axios(`https://rilibitoption.herokuapp.com/api/user/auth/get-users`, {
+          axios(`${BASE_URL}/api/user/auth/get-users`, {
             method: "get",
             data,
             headers: config.headers,

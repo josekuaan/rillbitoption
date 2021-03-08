@@ -7,6 +7,7 @@ import Cookies from "js-cookie";
 import Swal from "sweetalert";
 import "../../style.css";
 import { WalletContext } from "../../../pageContext";
+import BASE_URL from "src/base_url";
 
 export default function Credit() {
   const { setCreditAccount, creditAccount } = useContext(WalletContext);
@@ -34,7 +35,7 @@ export default function Credit() {
   const fetchData = async () => {
     axios
       .get(
-        `https://rilibitoption.herokuapp.com/api/investment/get-single-user-investment/${id}`,
+        `${BASE_URL}/api/investment/get-single-user-investment/${id}`,
         config
       )
       .then((response) => {
@@ -52,7 +53,7 @@ export default function Credit() {
 
     axios({
       method: "put",
-      url: `https://rilibitoption.herokuapp.com/api/investment/update-user-account/${id}`,
+      url: `${BASE_URL}/api/investment/update-user-account/${id}`,
       data,
       config,
       headers: config.headers,

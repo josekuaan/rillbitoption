@@ -10,6 +10,7 @@ import {
   CImg,
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
+import BASE_URL from "src/base_url";
 
 const TheHeaderDropdown = () => {
   const [picture, setPicture] = useState("");
@@ -31,7 +32,7 @@ const TheHeaderDropdown = () => {
     };
     axios
       .get(
-        `https://rilibitoption.herokuapp.com/api/user/auth/getMe/${userId}`,
+        `${BASE_URL}/api/user/auth/getMe/${userId}`,
         config
       )
       .then(function (response) {

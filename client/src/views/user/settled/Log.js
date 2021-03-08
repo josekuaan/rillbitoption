@@ -5,6 +5,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import { WalletContext } from "../../../pageContext";
 import Items from "./Items";
+import BASE_URL from "src/base_url";
 
 export default function Log() {
   const { setSettled, settled } = useContext(WalletContext);
@@ -28,7 +29,7 @@ export default function Log() {
   const fetchData = async () => {
     axios
       .get(
-        `https://rilibitoption.herokuapp.com/api/investment/settled-users-investment/${userId}`,
+        `${BASE_URL}/api/investment/settled-users-investment/${userId}`,
         config
       )
       .then(function (response) {

@@ -6,6 +6,7 @@ import Cookies from "js-cookie";
 import { WalletContext } from "../../../pageContext";
 import happy from "../../../assets/icons/happiness.svg";
 import "../../style.css";
+import BASE_URL from "src/base_url";
 
 const Dashboard = () => {
   const {
@@ -30,7 +31,7 @@ const Dashboard = () => {
       },
     };
     axios
-      .get(`https://rilibitoption.herokuapp.com/api/user/auth/getMe/${userId}`,config)
+      .get(`${BASE_URL}/api/user/auth/getMe/${userId}`,config)
       .then(function (response) {
         console.log(response);
         if (response.data.success) {
@@ -39,7 +40,7 @@ const Dashboard = () => {
         }
         axios
           .get(
-            `https://rilibitoption.herokuapp.com/api/investment/single-users-investment/${response.data.msg._id}`
+            `${BASE_URL}/api/investment/single-users-investment/${response.data.msg._id}`
           )
           .then(function (response) {
             console.log(response);

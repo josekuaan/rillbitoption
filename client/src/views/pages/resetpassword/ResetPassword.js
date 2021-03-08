@@ -24,6 +24,7 @@ import {
   CRow,
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
+import BASE_URL from "src/base_url";
 
 const Login = () => {
   const history = useHistory();
@@ -47,7 +48,7 @@ const Login = () => {
 
     axios
       .put(
-        `https://rilibitoption.herokuapp.com/api/user/auth/reset-password/${resettoken}`,
+        `${BASE_URL}/api/user/auth/reset-password/${resettoken}`,
         data,
         config
       )

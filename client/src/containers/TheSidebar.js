@@ -32,22 +32,14 @@ const TheSidebar = () => {
         to="/"
         style={{ padding: "20px",justifyContent: 'left' }}
       >
-        {/* <CIcon
-          className="c-sidebar-brand-full"
-          name={logo}
-          height={35}
-        /> */}
+        
         <img
           src={logo}
           alt="logo"
           className="c-sidebar-brand-full"
           height={45}
         />
-        {/* <CIcon
-          
-          name="sygnet"
-          height={35}
-        /> */}
+        
       </CSidebarBrand>
       <CSidebarNav >
         <CCreateElement

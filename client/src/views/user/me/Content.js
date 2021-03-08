@@ -7,6 +7,7 @@ import Cookies from "js-cookie";
 import Swal from "sweetalert";
 
 import "../../style.css";
+import BASE_URL from "src/base_url";
 
 export default function Content() {
   const token = Cookies.get("token");
@@ -43,7 +44,7 @@ export default function Content() {
     console.log(userId)
     axios
       .get(
-        `https://rilibitoption.herokuapp.com/api/user/auth/getMe/${userId}`,
+        `${BASE_URL}/api/user/auth/getMe/${userId}`,
         config
       )
       .then(function (response) {
@@ -63,7 +64,7 @@ export default function Content() {
 console.log('id',response.data.msg._id)
         axios
           .get(
-            `https://rilibitoption.herokuapp.com/api/investment/single-users-investment/${response.data.msg._id}`
+            `${BASE_URL}/api/investment/single-users-investment/${response.data.msg._id}`
           )
           .then(function (response) {
             if (response.data.success) {
@@ -121,7 +122,7 @@ console.log('id',response.data.msg._id)
     };
     axios
       .put(
-        `https://rilibitoption.herokuapp.com/api/user/auth/update-account/${userId}`,
+        `${BASE_URL}/api/user/auth/update-account/${userId}`,
         formData,
         config
       )

@@ -18,6 +18,7 @@ import {
   CRow,
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
+import BASE_URL from "src/base_url";
 
 const Register = () => {
   const history = useHistory();
@@ -43,7 +44,7 @@ const Register = () => {
 
     axios
       .post(
-        "https://rilibitoption.herokuapp.com/api/user/auth/register",
+        `${BASE_URL}/api/user/auth/register`,
         data,
         config
       )

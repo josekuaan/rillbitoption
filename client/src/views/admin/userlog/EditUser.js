@@ -8,6 +8,7 @@ import Swal from "sweetalert";
 
 import "../../style.css";
 import { WalletContext } from "../../../pageContext";
+import BASE_URL from "src/base_url";
 
 export default function EditUser() {
   const { setEditAccount, EditAccount } = useContext(WalletContext);
@@ -44,7 +45,7 @@ export default function EditUser() {
     const user_id = history.location.pathname.split("/")[4];
     axios
       .get(
-        `https://rilibitoption.herokuapp.com/api/user/auth/get-user/${user_id}`,
+        `${BASE_URL}/api/user/auth/get-user/${user_id}`,
         config
       )
       .then(function (response) {
@@ -62,7 +63,7 @@ export default function EditUser() {
 
           axios
             .get(
-              `https://rilibitoption.herokuapp.com/api/investment/single-users-investment/${response.data.msg._id}`,
+              `${BASE_URL}/api/investment/single-users-investment/${response.data.msg._id}`,
               config
             )
             .then((response) => {
@@ -81,7 +82,7 @@ export default function EditUser() {
     const id = history.location.pathname.split("/")[4];
     axios({
       method: "put",
-      url: `https://rilibitoption.herokuapp.com/api/user/auth/update/${id}`,
+      url: `${BASE_URL}/api/user/auth/update/${id}`,
       data: status,
       headers: config.headers,
     }).then((response) => {

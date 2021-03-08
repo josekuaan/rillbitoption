@@ -8,6 +8,7 @@ import Cookies from "js-cookie";
 import isLoggedIn from "../../../helper";
 import "../../style.css";
 import mini from "../../../assets/icons/mini-logo.png";
+import BASE_URL from "src/base_url";
 
 export default function Content() {
   const { payment, setPayment } = useContext(WalletContext);
@@ -44,7 +45,7 @@ export default function Content() {
   const fetchData = async () => {
     axios
       .get(
-        `https://rilibitoption.herokuapp.com/api/investment/users-investment/${userId}`,
+        `${BASE_URL}/api/investment/users-investment/${userId}`,
         config.headers
       )
       .then(function (response) {

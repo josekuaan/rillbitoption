@@ -6,6 +6,7 @@ import Cookies from "js-cookie";
 import happy from "../../assets/icons/happiness.svg";
 import { WalletContext } from "../../pageContext";
 import "../style.css";
+import BASE_URL from "src/base_url";
 
 const Dashboard = () => {
   const {
@@ -33,7 +34,7 @@ const Dashboard = () => {
   const fetchData = async () => {
     axios
       .get(
-        `https://rilibitoption.herokuapp.com/api/user/auth/getMe/${userId}`,
+        `${BASE_URL}/api/user/auth/getMe/${userId}`,
         config
       )
       .then(function (response) {
@@ -44,7 +45,7 @@ const Dashboard = () => {
         }
         axios
           .get(
-            `https://rilibitoption.herokuapp.com/api/investment/single-users-investment/${userId}`,
+            `${BASE_URL}/api/investment/single-users-investment/${userId}`,
             config
           )
           .then(function (response) {

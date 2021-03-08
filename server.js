@@ -36,7 +36,7 @@ app.use(
       styleSrc: ["'self'","'unsafe-inline'",'https://fonts.googleapis.com','https://translate.google.com','https://translate.googleapis.com'],
       fontSrc: ["'self'", 'https://maxcdn.bootstrapcdn.com', 'https: data:','https://fonts.googleapis.com'],
       imgSrc: ["'self'", 'http://www.w3.org', 'https://www.gstatic.com/','https://chart.googleapis.com','https://e-capitaloption.com/','data:'],
-      baseUri: ["'self'", 'https://rilibitoption.herokuapp.com'],
+      baseUri: ["'self'", 'https://rillbitoption.com'],
     },
   })
   // ]

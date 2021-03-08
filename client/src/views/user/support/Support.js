@@ -16,6 +16,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 
 import "../../style.css";
+import BASE_URL from "src/base_url";
 
 const Support = () => {
   const [collapsed] = React.useState(true);
@@ -47,7 +48,7 @@ const Support = () => {
     };
     axios({
       method: "post",
-      url: `https://rilibitoption.herokuapp.com/api/user/mailer/${userId}`,
+      url: `${BASE_URL}/api/user/mailer/${userId}`,
       data,
       headers: config,
     }).then(function (response) {

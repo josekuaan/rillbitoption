@@ -89,5 +89,5 @@
     "node": ">=10",
     "npm": ">=6"
   },
-  "proxy": "https://rilibitoption.herokuapp.com:6364"
+  "proxy": "https://rillbitoption.com:6364"
 }
