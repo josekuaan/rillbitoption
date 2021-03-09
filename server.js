@@ -28,15 +28,15 @@ app.use(
   // [
   helmet.contentSecurityPolicy({
     directives: {
-      defaultSrc: ["'self'"],
-      connectSrc: ["'self'", 'https://widget.coinlib.io', 'https://coinlib.io','https://ws.coinlib.io/socket.io'],
+      defaultSrc: ["'self'"], 
+      connectSrc: ["'self'", 'https://widget.coinlib.io', 'https://coinlib.io','https://ws.coinlib.io/socket.io',' http://www.rillbitoption.com'],
       frameSrc: ["'self'", 'https://widget.coinlib.io', 'https://coinlib.io'],
       childSrc: ["'self'", 'https://widget.coinlib.io', 'https://coinlib.io'],
       scriptSrc: ["'self'", "'unsafe-inline'",'https://widget.coinlib.io', 'https://coinlib.io','https://unpkg.com','https://translate.google.com','https://translate.googleapis.com','https://secure.trust-provider.com'],
       styleSrc: ["'self'","'unsafe-inline'",'https://fonts.googleapis.com','https://translate.google.com','https://translate.googleapis.com'],
       fontSrc: ["'self'", 'https://maxcdn.bootstrapcdn.com', 'https: data:','https://fonts.googleapis.com'],
-      imgSrc: ["'self'", 'http://www.w3.org', 'https://www.gstatic.com/','https://chart.googleapis.com','https://e-capitaloption.com/','https://secure.trust-provider.com','https://www.positivessl.com','data:'],
-      baseUri: ["'self'", 'https://rillbitoption.com'],
+      imgSrc: ["'self'", 'http://www.w3.org', 'https://www.gstatic.com/','https://chart.googleapis.com','https://e-capitaloption.com/','https://secure.trust-provider.com','data:'],
+      baseUri: ["'self'", ' http://www.rillbitoption.com'],
     },
   })
   // ]

@@ -49,16 +49,16 @@ const Login = () => {
     const config = {
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "http://www.rillbitoption.com",
         "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
       },
     };
 
     axios
       .post(
-        `${BASE_URL}/api/user/auth/login`,
+        `${BASE_URL}/api/user/auth/login`, 
         data,
-        config
+        config 
       )
       .then(function (response) {
         
