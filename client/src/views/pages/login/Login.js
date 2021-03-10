@@ -98,12 +98,13 @@ const Login = () => {
         setError(error.response.data.msg);
         console.log(error);
         if (error.response === undefined) {
-          setLoading(false);
+          // setLoading(false);
           // return setError(
           //   "Could not connect to the server, check your network"
           // );
         } else {
-          setError(error.response.data.msg);
+          console.log(error.response);
+          // setError(error.response.data.msg);
         }
         setLoading(false);
       });
