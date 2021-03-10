@@ -28,7 +28,7 @@ const handleScroll=() => {
     <nav className="navbar navbar-expand-lg navbar-light p-0">
       <div className="container">
         {/*<a class="navbar-brand" href="#welcomeArea">
-					 Rilibit Option
+					 Rillbit Option
 				</a> */}
         <a className="logo-container" href="/"><img src="appassets/newimages/logo1.png" alt="Logo" className="navbar-brand" style={{ width: '176px', height: 50}} /></a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,9 +65,9 @@ const handleScroll=() => {
       <div className="row welcomaareaRow">
         <div className="col-md-6 d-flex align-self-center">
           <div className="left">
-            <h1 className="info"> Rilibit Option</h1>
+            <h1 className="info"> Rillbit Option</h1>
             <p style={{textAlign: 'justify'}}>
-              <font color="white">We are  Rilibit Option, consistently rated the best and the most secure
+              <font color="white">We are  Rillbit Option, consistently rated the best and the most secure
                 cryptocurrency platform.
                 We put power in your hand to buy, sell, and trade digital currency.</font>
             </p>
@@ -91,19 +91,19 @@ const handleScroll=() => {
                       Who We Are?</span></span></span></h2>
               {/*<h2>
 								We've Built
-								 Rilibit Option Platform
+								 Rillbit Option Platform
 							</h2>*/}
             </div>
             <div className="content">
               <p style={{textAlign: 'justify'}}><span style={{fontSize: 16}}><span style={{fontFamily: 'times new roman,times,serif'}}>As one of the leading Bitcoin
                     trading company in the world,
-                    Rilibit Option&nbsp; is consistently named one of the best places to mine, buy
+                    Rillbit Option&nbsp; is consistently named one of the best places to mine, buy
                     and sell crypto online, thanks to our excellent service, low fees, versatile
                     funding options and rigorous security standards.</span></span></p>
               <p style={{textAlign: 'justify'}}><span style={{fontSize: 16}}><span style={{fontFamily: 'times new roman,times,serif'}}>Recognizing the importance of
                     Bitcoin from the onset, and understanding that the exchange
                     is the most critical part of the cryptocurrency ecosystem, Mikhail Fridman
-                    founded  Rilibit Option to give people the means to quickly and securely invest
+                    founded  Rillbit Option to give people the means to quickly and securely invest
                     in the space. Since
                     then, the company has grown by leaps and bounds with hundreds of employees
                     spanning the globe.</span></span></p>
@@ -164,7 +164,7 @@ const handleScroll=() => {
         <div className="col-12 text-center">
           <div className="heading-title2">
             <h2>
-              {/* Rilibit Option Transaction*/} How to Get Started
+              {/* Rillbit Option Transaction*/} How to Get Started
             </h2>
             <h4>
               <font style={{color: 'white'}}>
@@ -294,7 +294,7 @@ const handleScroll=() => {
             <font style={{color: 'white'}}>Service we Provide</font>
           </h2>
           <h5>
-            <font style={{color: 'white'}}> Rilibit Option is more than just a Bitcoin trading platform. We
+            <font style={{color: 'white'}}> Rillbit Option is more than just a Bitcoin trading platform. We
               provide a wide range of Blockchain
               focused Marketing, easy way to buy, send, store, mine and learn about cryptocurrency.</font>
           </h5>
@@ -314,7 +314,7 @@ const handleScroll=() => {
               </h4>
             </center>
             <p style={{textAlign: 'justify'}}>
-              <font color="white">There are several ways to buy, sell, and trade bitcoins on  Rilibit
+              <font color="white">There are several ways to buy, sell, and trade bitcoins on  Rillbit
                 Option. Each way you can buy bitcoin is called a "payment method".</font>
             </p>
           </div>
@@ -369,7 +369,7 @@ const handleScroll=() => {
               </h4>
             </center>
             <p style={{textAlign: 'justify'}}>
-              <font color="white">T Rilibit Option is licensed and regulated by the New York Financial
+              <font color="white">T Rillbit Option is licensed and regulated by the New York Financial
                 Services
                 Commission under the Financial Services (Electronic Money) Regulations 2011 as
                 an "Electronic Money Institution" with license No. FSC0063BNK.</font>
@@ -389,7 +389,7 @@ const handleScroll=() => {
               </h4>
             </center>
             <p style={{textAlign: 'justify'}}>
-              <font color="white">Voted as the Most Trusted Bitcoin Investment site,  Rilibit Option is
+              <font color="white">Voted as the Most Trusted Bitcoin Investment site,  Rillbit Option is
                 by far the most popular because you can invest in bitcoin directly with USD and get paid
                 within 24 hours.</font>
             </p>
@@ -634,11 +634,11 @@ const handleScroll=() => {
                     <img src="appassets/newimages/logo1.png" alt="Logo" />
                   </div>
                   <p style={{textAlign: 'justify'}}>
-                    <font style={{color: 'white'}}> Rilibit Option is one of the fastest growing online
+                    <font style={{color: 'white'}}> Rillbit Option is one of the fastest growing online
                       trading brands in the world.
                       Voted the best mobile trading platform, we have now expanded our offerings
                       to include CFDs on stocks and ETFs, Forex trading, and the exclusive
-                      Rilibit Option product called Digital Options.</font>
+                      Rillbit Option product called Digital Options.</font>
                   </p>
                 </div>
               </aside>
@@ -654,7 +654,7 @@ const handleScroll=() => {
                   <ul>
                     {/*<li><font style="color:white;">1387 Atlantic Avenue, Brooklyn, NYC, USA.</font></li> */}
                     <li>
-                      <font style={{color: 'white'}}>support@Rilibitoption.com</font>
+                      <font style={{color: 'white'}}>support@Rillbitoption.com</font>
                     </li>
                     <li>
                       <font style={{color: 'white'}}>+447862205606</font>

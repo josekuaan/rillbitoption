@@ -49,7 +49,7 @@ const Login = () => {
     const config = {
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "http://www.rillbitoption.com",
+        "Access-Control-Allow-Origin": "https://www.rillbitoption.com",
         "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
       },
     };

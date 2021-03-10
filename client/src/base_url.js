@@ -1,4 +1,4 @@
 
-const BASE_URL=" http://www.rillbitoption.com"
+const BASE_URL="https://www.rillbitoption.com"
 
 export default  BASE_URL

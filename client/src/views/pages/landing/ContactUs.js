@@ -274,7 +274,7 @@ export default function ContactUs() {
               <font style={{color: 'black'}}>Mail Us</font>
             </h2>
             <h3 className="call-no" data-animate="hg-fadeInUp">
-              <font style={{color: '#9eae3a'}}>support@ Rilibitoption.com</font>
+              <font style={{color: '#9eae3a'}}>support@ Rillbitoption.com</font>
             </h3>
             <p style={{paddingBottom: 100}}>
               If we can help you on your journey ! <br />
@@ -319,11 +319,11 @@ export default function ContactUs() {
                     </div>
                     <p style={{textAlign: 'justify'}}>
                       <font style={{color: 'white'}}>
-                        Rilibit Option is one of the fastest growing
+                        Rillbit Option is one of the fastest growing
                         online trading brands in the world. Voted the best
                         mobile trading platform, we have now expanded our
                         offerings to include CFDs on stocks and ETFs, Forex
-                        trading, and the exclusive Rilibit Option
+                        trading, and the exclusive Rillbit Option
                         product called Digital Options.</font>
                     </p>
                   </div>
@@ -340,7 +340,7 @@ export default function ContactUs() {
                     <ul>
                       {/*<li><font style="color:white;">1387 Atlantic Avenue, Brooklyn, NYC, USA.</font></li> */}
                       <li>
-                        <font style={{color: 'white'}}>support@Rilibit.com</font>
+                        <font style={{color: 'white'}}>support@Rillbit.com</font>
                       </li>
                       <li>
                         <font style={{color: 'white'}}>+447862205606</font>

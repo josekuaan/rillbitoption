@@ -29,28 +29,30 @@ app.use(
   helmet.contentSecurityPolicy({
     directives: {
       defaultSrc: ["'self'"], 
-      connectSrc: ["'self'", 'https://widget.coinlib.io', 'https://coinlib.io','https://ws.coinlib.io/socket.io',' http://www.rillbitoption.com'],
+      connectSrc: ["'self'", 'https://widget.coinlib.io', 'https://coinlib.io','https://ws.coinlib.io/socket.io',' https://www.rillbitoption.com/'],
       frameSrc: ["'self'", 'https://widget.coinlib.io', 'https://coinlib.io'],
       childSrc: ["'self'", 'https://widget.coinlib.io', 'https://coinlib.io'],
       scriptSrc: ["'self'", "'unsafe-inline'",'https://widget.coinlib.io', 'https://coinlib.io','https://unpkg.com','https://translate.google.com','https://translate.googleapis.com','https://secure.trust-provider.com'],
       styleSrc: ["'self'","'unsafe-inline'",'https://fonts.googleapis.com','https://translate.google.com','https://translate.googleapis.com'],
       fontSrc: ["'self'", 'https://maxcdn.bootstrapcdn.com', 'https: data:','https://fonts.googleapis.com'],
       imgSrc: ["'self'", 'http://www.w3.org', 'https://www.gstatic.com/','https://chart.googleapis.com','https://e-capitaloption.com/','https://secure.trust-provider.com','data:'],
-      baseUri: ["'self'", ' http://www.rillbitoption.com'],
+      baseUri: ["'self'", ' https://www.rillbitoption.com/'],
     },
   })
   // ]
 );
-app.use(
-  helmet.referrerPolicy({
-    policy: ["origin", "unsafe-url"],
-  })
-);
-
-app.use("/api/investment", investment);
-app.use("/api/user/withdraw", withdraw);
-app.use("/api/user/auth", auth);
-app.use("/api/user/", mailer);
+// app.use(
+//   helmet.referrerPolicy({
+//     policy: ["origin", "unsafe-url"],
+//   })
+// );
+const corsOptions = {
+  origin: 'https://www.rillbitoption.com',
+}
+app.use("/api/investment", cors(corsOptions),investment);
+app.use("/api/user/withdraw",cors(corsOptions), withdraw);
+app.use("/api/user/auth",cors(corsOptions), auth);
+app.use("/api/user/",cors(corsOptions), mailer);
 // console.log(path.join(__dirname, "/client/build"))
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/client/build")));

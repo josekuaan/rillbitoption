@@ -111,14 +111,14 @@ export default function Aboutus() {
               {/* /.title-main */}
               <div className="title-text" data-animate="hg-fadeInUp">
                 <p style={{textAlign: 'justify'}}>
-                  Rilibit Option is one of the fastest growing online
+                  Rillbit Option is one of the fastest growing online
                   trading brands in the world. Voted the best mobile trading
                   platform, we have now expanded our offerings to include CFDs
                   on stocks and ETFs, Forex trading, and the exclusive
                   IQOption product called Digital Options.
                 </p>
                 <p style={{textAlign: 'justify'}}>
-                  First founded in 2013, Rilibit Option has grown
+                  First founded in 2013, Rillbit Option has grown
                   massively, and now has over 40 million members and counting!
                   The platform itself has also undergone some changes since
                   2013, and we are constantly working to ensure it is fast,
@@ -460,9 +460,9 @@ export default function Aboutus() {
             </h2>
             {/* /.title-main */}
             <div className="title-text" data-animate="hg-fadeInUp">
-              Millions have already successfully used Rilibit Option and
+              Millions have already successfully used Rillbit Option and
               they have had a lot of nice things to say about us. Here's what
-              our users think about Rilibit Option, in their own words.
+              our users think about Rillbit Option, in their own words.
             </div>
             {/* /.title-text */}
           </div>
@@ -491,7 +491,7 @@ export default function Aboutus() {
                 {/* /.client-area */}
                 <div className="details">
                   <p>
-                    Rilibit Option has made it extremely easy for me to
+                    Rillbit Option has made it extremely easy for me to
                     make an income trading online. In fact it is the only
                     service I use because of the smooth interface and large
                     user base.
@@ -525,7 +525,7 @@ export default function Aboutus() {
                 {/* /.client-area */}
                 <div className="details">
                   <p>
-                    Being an Rilibit Option costumer has been great.
+                    Being an Rillbit Option costumer has been great.
                     Support is always responsive and helpful.
                   </p>
                   <div className="total-reviews">
@@ -592,7 +592,7 @@ export default function Aboutus() {
                 {/* /.client-area */}
                 <div className="details">
                   <p>
-                    Rilibit Option is a true 24/7/365 trading platform
+                    Rillbit Option is a true 24/7/365 trading platform
                     that’s innovative and secure.
                   </p>
                   <div className="total-reviews">
@@ -647,11 +647,11 @@ export default function Aboutus() {
                     </div>
                     <p style={{textAlign: 'justify'}}>
                       <font style={{color: 'white'}}>
-                        Rilibit Option is one of the fastest growing
+                        Rillbit Option is one of the fastest growing
                         online trading brands in the world. Voted the best
                         mobile trading platform, we have now expanded our
                         offerings to include CFDs on stocks and ETFs, Forex
-                        trading, and the exclusive Rilibit Option
+                        trading, and the exclusive Rillbit Option
                         product called Digital Options.</font>
                     </p>
                   </div>
@@ -668,7 +668,7 @@ export default function Aboutus() {
                     <ul>
                       {/*<li><font style="color:white;">1387 Atlantic Avenue, Brooklyn, NYC, USA.</font></li> */}
                       <li>
-                        <font style={{color: 'white'}}>support@Rilibit.com</font>
+                        <font style={{color: 'white'}}>support@Rillbit.com</font>
                       </li>
                       <li>
                         <font style={{color: 'white'}}>+447862205606</font>
