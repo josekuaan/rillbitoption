@@ -46,7 +46,8 @@ const TheHeaderDropdown = () => {
     window.localStorage.removeItem("userId");
     window.localStorage.removeItem("loggedIn");
     Cookies.remove("token");
-    history.push("/login");
+    window.location.reload();
+    // history.push("/login");
   };
   return (
     <CDropdown inNav className="c-header-nav-items mx-2" direction="down">
