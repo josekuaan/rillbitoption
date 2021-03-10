@@ -88,6 +88,5 @@
   "engines": {
     "node": ">=10",
     "npm": ">=6"
-  },
-  "proxy": "https://rillbitoption.com:6364"
+  }
 }

@@ -49,7 +49,7 @@ const Login = () => {
     const config = {
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "https://www.rillbitoption.com",
+        "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
       },
     };
@@ -95,12 +95,13 @@ const Login = () => {
         }
       })
       .catch(function (error) {
-        console.log();
+        setError(error.response.data.msg);
+        console.log(error);
         if (error.response === undefined) {
           setLoading(false);
-          return setError(
-            "Could not connect to the server, check your network"
-          );
+          // return setError(
+          //   "Could not connect to the server, check your network"
+          // );
         } else {
           setError(error.response.data.msg);
         }

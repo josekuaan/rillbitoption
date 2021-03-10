@@ -41,18 +41,15 @@ app.use(
   })
   // ]
 );
-// app.use(
-//   helmet.referrerPolicy({
-//     policy: ["origin", "unsafe-url"],
-//   })
-// );
-const corsOptions = {
-  origin: 'https://www.rillbitoption.com',
-}
-app.use("/api/investment", cors(corsOptions),investment);
-app.use("/api/user/withdraw",cors(corsOptions), withdraw);
-app.use("/api/user/auth",cors(corsOptions), auth);
-app.use("/api/user/",cors(corsOptions), mailer);
+
+app.use((req,res,next)=>{
+  res.header("Access-Control-Allow-Origin",process.env.ORIGIN || "*")
+  next()
+})
+app.use("/api/investment",investment);
+app.use("/api/user/withdraw", withdraw);
+app.use("/api/user/auth", auth);
+app.use("/api/user/", mailer);
 // console.log(path.join(__dirname, "/client/build"))
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/client/build")));

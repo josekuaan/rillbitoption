@@ -30,7 +30,7 @@ const WalletContext = createContext();
           const token = Cookies.get('token')
           const config = {
             headers: { 
-              'Access-Control-Allow-Origin' : ' https://www.rillbitoption.com',
+              'Access-Control-Allow-Origin' : '*',
               'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS', 
               Authorization: `Bearer ${token}` },
               "Content-Type": "application/json"
