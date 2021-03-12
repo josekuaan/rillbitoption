@@ -28,25 +28,60 @@ app.use(
   // [
   helmet.contentSecurityPolicy({
     directives: {
-      defaultSrc: ["'self'"], 
-      connectSrc: ["'self'", 'https://widget.coinlib.io', 'https://coinlib.io','https://ws.coinlib.io/socket.io',' https://www.rillbitoption.com/'],
-      frameSrc: ["'self'", 'https://widget.coinlib.io', 'https://coinlib.io'],
-      childSrc: ["'self'", 'https://widget.coinlib.io', 'https://coinlib.io'],
-      scriptSrc: ["'self'", "'unsafe-inline'",'https://widget.coinlib.io', 'https://coinlib.io','https://unpkg.com','https://translate.google.com','https://translate.googleapis.com','https://secure.trust-provider.com'],
-      styleSrc: ["'self'","'unsafe-inline'",'https://fonts.googleapis.com','https://translate.google.com','https://translate.googleapis.com'],
-      fontSrc: ["'self'", 'https://maxcdn.bootstrapcdn.com', 'https: data:','https://fonts.googleapis.com'],
-      imgSrc: ["'self'", 'http://www.w3.org', 'https://www.gstatic.com/','https://chart.googleapis.com','https://e-capitaloption.com/','https://secure.trust-provider.com','data:'],
-      baseUri: ["'self'", ' https://www.rillbitoption.com/'],
+      defaultSrc: ["'self'"],
+      connectSrc: [
+        "'self'",
+        "https://widget.coinlib.io",
+        "https://coinlib.io",
+        "https://ws.coinlib.io/socket.io",
+        " https://www.rillbitoption.com/",
+        "https://translate.googleapis.com",
+      ],
+      frameSrc: ["'self'", "https://widget.coinlib.io", "https://coinlib.io"],
+      childSrc: ["'self'", "https://widget.coinlib.io", "https://coinlib.io"],
+      scriptSrc: [
+        "'self'",
+        "'unsafe-inline'",
+        "https://widget.coinlib.io",
+        "https://coinlib.io",
+        "https://unpkg.com",
+        "https://translate.google.com",
+        "https://translate.googleapis.com",
+        "https://secure.trust-provider.com",
+      ],
+      styleSrc: [
+        "'self'",
+        "'unsafe-inline'",
+        "https://fonts.googleapis.com",
+        "https://translate.google.com",
+        "https://translate.googleapis.com",
+      ],
+      fontSrc: [
+        "'self'",
+        "https://maxcdn.bootstrapcdn.com",
+        "https: data:",
+        "https://fonts.googleapis.com",
+      ],
+      imgSrc: [
+        "'self'",
+        "http://www.w3.org",
+        "https://www.gstatic.com/",
+        "https://chart.googleapis.com",
+        "https://e-capitaloption.com/",
+        "https://secure.trust-provider.com",
+        "data:",
+      ],
+      baseUri: ["'self'", " https://www.rillbitoption.com/"],
     },
   })
   // ]
 );
 
-app.use((req,res,next)=>{
-  res.header("Access-Control-Allow-Origin",process.env.ORIGIN || "*")
-  next()
-})
-app.use("/api/investment",investment);
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", process.env.ORIGIN || "*");
+  next();
+});
+app.use("/api/investment", investment);
 app.use("/api/user/withdraw", withdraw);
 app.use("/api/user/auth", auth);
 app.use("/api/user/", mailer);
