@@ -122,7 +122,7 @@ const Support = () => {
                             </p>
                             <hr />
 
-                            <div>
+                            <div >
                               <ul
                                 style={{
                                   listStyle: "none",

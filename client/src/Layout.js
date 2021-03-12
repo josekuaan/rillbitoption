@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch,useHistory } from "react-router-dom";
+import { Route, Switch,Redirect } from "react-router-dom";
 import IdleTimer from "react-idle-timer";
 import Cookies from "js-cookie";
 
@@ -21,7 +21,7 @@ class Layout extends Component {
     this.onAction = this._onAction.bind(this);
     this.onActive = this._onActive.bind(this);
     this.onIdle = this._onIdle.bind(this);
-    // const history = useHistory();
+    
   }
 
   _onAction(e) {
@@ -43,7 +43,7 @@ class Layout extends Component {
         window.localStorage.removeItem("loggedIn");
         Cookies.remove("token");
         
-        this.props.history.push("/login");
+        // this.props.history.push("/login");
         window.location.reload();
     } else {
       this.idleTimer.reset();
@@ -52,6 +52,10 @@ class Layout extends Component {
     }
   }
   render() {
+    const isLoggedIn = window.localStorage.getItem("loggedIn");
+    if (isLoggedIn === null) {
+      return <Redirect to="/login" />;  
+    }
     return (
       <>
         <IdleTimer

@@ -55,6 +55,22 @@ const Dashboard = () => {
             }
           });
       });
+      axios.get(`${BASE_URL}/api/user/auth/getMe/${userId}`,
+      config
+      )
+      .then(function (response) {
+        // handle success
+        if(response.data.success){
+          setCurrentUser([response.data.msg]);
+        }
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error.response);
+      })
+      .then(function () {
+        // always executed
+      });
   };
   if (isLoggedIn === null) {
     return <Redirect to="/login" />;

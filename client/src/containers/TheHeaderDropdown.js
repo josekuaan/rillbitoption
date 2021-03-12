@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import axios from "axios";
 import Cookies from "js-cookie";
 import {
@@ -15,7 +15,7 @@ import BASE_URL from "src/base_url";
 const TheHeaderDropdown = () => {
   const [picture, setPicture] = useState("");
   const [email, setEmail] = useState(" ");
-  const history = useHistory();
+  const isLoggedIn = window.localStorage.getItem("loggedIn");
   useEffect(async () => {
     fetchData();
   }, []);
@@ -47,8 +47,13 @@ const TheHeaderDropdown = () => {
     window.localStorage.removeItem("loggedIn");
     Cookies.remove("token");
     window.location.reload();
-    // history.push("/login");
+    
   };
+console.log(isLoggedIn)
+
+  if (isLoggedIn === null) {
+    return <Redirect to="/login" />;
+  }
   return (
     <CDropdown inNav className="c-header-nav-items mx-2" direction="down">
       <CDropdownToggle className="c-header-nav-link" caret={false}>
