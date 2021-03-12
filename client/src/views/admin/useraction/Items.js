@@ -48,14 +48,11 @@ export default function Items() {
     })
       .then((response) => {
         if (response.data.success) {
-          axios(
-            `${BASE_URL}/api/investment/users-investment`,
-            {
-              method: "get",
-              data,
-              headers: config.headers,
-            }
-          )
+          axios(`${BASE_URL}/api/investment/users-investment`, {
+            method: "get",
+            data,
+            headers: config.headers,
+          })
             .then((response) => {
               if (response.data.success) {
                 setUserAction(response.data.invest);
@@ -93,7 +90,8 @@ export default function Items() {
                   title="delete user"
                   onClick={handleDelete(lo._id)}
                 >
-                  <i className="fa fa-close fill2"></i>
+                  <i class="fas fa-window-close"></i>
+                  {/* <i className="fa fa-close fill2"></i> */}
                 </Link>
               </td>
               <td style={{ border: "none" }}>
@@ -102,7 +100,8 @@ export default function Items() {
                   rel="tooltip"
                   title="edit user"
                 >
-                  <i className="fill fa fa-pencil"></i>
+                  <i class="fas fa-user-edit"></i>
+                  {/* <i className="fill fa fa-pencil"></i> */}
                 </Link>
               </td>
               <td style={{ border: "none" }}>

@@ -88,7 +88,8 @@ export default function Items() {
                 title="delete user"
                 onClick={handleDelete(lo._id)}
               >
-                <i className="fill2  fa fa-close"></i>
+                <i class="fas fa-window-close"></i>
+                {/* <i className="fill2  fa fa-close"></i> */}
               </Link>
               <Link
                 to={`/dashboard/admin/edit-user/${lo._id}`}
