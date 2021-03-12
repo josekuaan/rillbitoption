@@ -18,6 +18,7 @@ const Dashboard = () => {
   const userId = window.localStorage.getItem("userId");
   const isLoggedIn = window.localStorage.getItem("loggedIn");
   const token = Cookies.get("token");
+  console.log(token)
   useEffect(async () => {
     fetchData();
   }, []);
@@ -130,7 +131,7 @@ const Dashboard = () => {
                     />
                   </div>
                   {currentuser.map((user, index) => (
-                    <h2 className="fs-23 font-weight-600 mb-2">
+                    <h2 className="fs-23 font-weight-600 mb-2" key={index}>
                       Dear {user.fullName},
                     </h2>
                   ))}

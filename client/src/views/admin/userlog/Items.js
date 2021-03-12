@@ -9,7 +9,6 @@ import BASE_URL from "src/base_url";
 
 export default function Items() {
   const { users, setUsers } = useContext(WalletContext);
-  const [status, setStatus] = useState(false);
   const token = Cookies.get("token");
   const config = {
     headers: {

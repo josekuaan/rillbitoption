@@ -29,7 +29,7 @@ const Dashboard = () => {
   useEffect(async () => {
     let isMounted = true
     fetchData();
-    return () => { isMounted = false }
+    return () =>  isMounted = false 
   }, []);
   const fetchData = async () => {
     axios
@@ -72,6 +72,7 @@ const Dashboard = () => {
         // always executed
       });
   };
+  console.log(token)
   if (isLoggedIn === null) {
     return <Redirect to="/login" />;
   }

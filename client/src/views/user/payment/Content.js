@@ -1,11 +1,10 @@
 import React, { useContext, useEffect } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import * as moment from "moment";
 
 import { WalletContext } from "../../../pageContext";
 import axios from "axios";
 import Cookies from "js-cookie";
-import isLoggedIn from "../../../helper";
 import "../../style.css";
 import mini from "../../../assets/icons/mini-logo.png";
 import BASE_URL from "src/base_url";
@@ -39,7 +38,7 @@ export default function Content() {
   useEffect(() => {
     let isMounted = true
     fetchData();
-    return () => { isMounted = false }
+    return () => isMounted = false 
   }, []);
 
   const fetchData = async () => {

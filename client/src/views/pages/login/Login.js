@@ -67,7 +67,9 @@ const Login = () => {
           window.localStorage.setItem("userId", response.data.user._id);
           window.localStorage.setItem("loggedIn", true);
           Cookies.set("token", response.data.token);
+          // console.log('user',response.data)
           setButton(true)
+          // return
           if (
             response.data.user.role === "user" &&
             response.data.user.status === false

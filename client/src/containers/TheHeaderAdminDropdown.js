@@ -31,10 +31,7 @@ const TheHeaderAdminDropdown = () => {
       },
     };
     axios
-      .get(
-        `${BASE_URL}/api/user/auth/getMe/${userId}`,
-        config
-      )
+      .get(`${BASE_URL}/api/user/auth/getMe/${userId}`, config)
       .then(function (response) {
         if (response.data.success) {
           setPicture(response.data.msg.picture);
@@ -46,7 +43,6 @@ const TheHeaderAdminDropdown = () => {
     window.localStorage.removeItem("userId");
     window.localStorage.removeItem("loggedIn");
     Cookies.remove("token");
-   window.location.reload()
   };
   if (isLoggedIn === null) {
     return <Redirect to="/login" />;

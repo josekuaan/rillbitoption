@@ -31,14 +31,11 @@ const TheHeaderDropdown = () => {
       },
     };
     axios
-      .get(
-        `${BASE_URL}/api/user/auth/getMe/${userId}`,
-        config
-      )
+      .get(`${BASE_URL}/api/user/auth/getMe/${userId}`, config)
       .then(function (response) {
         if (response.data.success) {
           setPicture(response.data.msg.picture);
-          setEmail(response.data.msg.email)
+          setEmail(response.data.msg.email);
         }
       });
   };
@@ -46,10 +43,7 @@ const TheHeaderDropdown = () => {
     window.localStorage.removeItem("userId");
     window.localStorage.removeItem("loggedIn");
     Cookies.remove("token");
-    window.location.reload();
-    
   };
-console.log(isLoggedIn)
 
   if (isLoggedIn === null) {
     return <Redirect to="/login" />;
@@ -59,8 +53,11 @@ console.log(isLoggedIn)
       <CDropdownToggle className="c-header-nav-link" caret={false}>
         <div className="c-avatar">
           {picture === "no-photo.jpg" || picture === " " ? (
-            <div className="profile-background" >
-              <i className="fa fa-user" style={{ padding: "12px",fontSize: "16px" }}></i>
+            <div className="profile-background">
+              <i
+                className="fa fa-user"
+                style={{ padding: "12px", fontSize: "16px" }}
+              ></i>
             </div>
           ) : (
             <CImg

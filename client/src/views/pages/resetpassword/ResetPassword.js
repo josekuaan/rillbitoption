@@ -1,14 +1,10 @@
-import React, { useContext, useState } from "react";
-import { useHistory } from "react-router-dom";
+import React, { useState } from "react";
+import { useHistory,Redirect } from "react-router-dom";
 import { Formik } from "formik";
 import axios from "axios";
 import * as Yup from "yup";
-import Cookies from "js-cookie";
-import { Link } from "react-router-dom";
 import isLoggedIn from "../../../helper";
 import "../../style.css";
-
-import { WalletContext } from "../../../pageContext";
 import {
   CButton,
   CCard,
@@ -76,7 +72,9 @@ const Login = () => {
         setLoading(false);
       });
   };
-
+  if (isLoggedIn) {
+    return <Redirect to="/login" />;
+  }
   return (
     <div className="c-app c-default-layout flex-row align-items-center">
       <CContainer>

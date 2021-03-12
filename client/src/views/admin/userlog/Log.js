@@ -10,6 +10,7 @@ import BASE_URL from "src/base_url";
 
 export default function Log() {
   const token = Cookies.get("token");
+  console.log(token);
   const { setUsers, users } = useContext(WalletContext);
   useEffect(async () => {
     fetchData();
@@ -22,16 +23,13 @@ export default function Log() {
       Authorization: `Bearer ${token}`,
     },
   };
+  console.log(config)
 
   const fetchData = async () => {
     axios
-      .get(
-        `${BASE_URL}/api/user/auth/get-users`,
-        config
-      )
+      .get(`${BASE_URL}/api/user/auth/get-users`, config)
       .then(function (response) {
         if (response.data.success) {
-          console.log(response);
           setUsers(response.data.msg);
         }
       });
