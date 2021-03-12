@@ -11,7 +11,7 @@ class Layout extends Component {
     super(props);
 
     this.state = {
-      timeout: 1000 * 15 * 1,
+      timeout: 1000 * 150 * 1,
       showModal: false,
       userLoggedIn: false,
       isTimedOut: false,

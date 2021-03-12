@@ -18,7 +18,7 @@ const Dashboard = () => {
   const userId = window.localStorage.getItem("userId");
   const isLoggedIn = window.localStorage.getItem("loggedIn");
   const token = Cookies.get("token");
-  console.log(token)
+  console.log(token);
   useEffect(async () => {
     fetchData();
   }, []);
@@ -32,7 +32,7 @@ const Dashboard = () => {
       },
     };
     axios
-      .get(`${BASE_URL}/api/user/auth/getMe/${userId}`,config)
+      .get(`${BASE_URL}/api/user/auth/getMe/${userId}`, config)
       .then(function (response) {
         console.log(response);
         if (response.data.success) {
@@ -47,6 +47,7 @@ const Dashboard = () => {
             console.log(response);
             if (response.data.success) {
               setCreditAccount(response.data.invest);
+              window.location.reload();
             }
           });
       });
