@@ -41,16 +41,17 @@ class Layout extends Component {
       window.localStorage.removeItem("loggedIn");
       Cookies.remove("token");
       window.location.reload();
+      return <Redirect to="/login" />;
     } else {
       this.idleTimer.reset();
       this.setState({ isTimedOut: false });
     }
   }
   render() {
-    const isLoggedIn = window.localStorage.getItem("loggedIn");
-    if (isLoggedIn === null) {
-      return <Redirect to="/login" />;
-    }
+    // const isLoggedIn = window.localStorage.getItem("loggedIn");
+    // if (isLoggedIn === null) {
+
+    // }
     return (
       <>
         <IdleTimer
