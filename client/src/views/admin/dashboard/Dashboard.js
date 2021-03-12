@@ -47,7 +47,6 @@ const Dashboard = () => {
             console.log(response);
             if (response.data.success) {
               setCreditAccount(response.data.invest);
-              window.location.reload();
             }
           });
       });

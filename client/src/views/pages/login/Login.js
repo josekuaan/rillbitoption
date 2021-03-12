@@ -1,4 +1,4 @@
-import React, { useContext, useState,useEffect } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { Formik } from "formik";
 import axios from "axios";
@@ -39,8 +39,8 @@ const Login = () => {
     // window.location.reload(true);
     return () => {
       window.stop();
-    }
-  }, [window])
+    };
+  }, [window]);
   const submitUser = async (userInfo) => {
     const data = {
       email: userInfo.email,
@@ -55,20 +55,15 @@ const Login = () => {
     };
 
     axios
-      .post(
-        `${BASE_URL}/api/user/auth/login`, 
-        data,
-        config 
-      )
+      .post(`${BASE_URL}/api/user/auth/login`, data, config)
       .then(function (response) {
-        
         if (response.data.success) {
           setCurrentUser([response.data.user]);
           window.localStorage.setItem("userId", response.data.user._id);
           window.localStorage.setItem("loggedIn", true);
           Cookies.set("token", response.data.token);
           // console.log('user',response.data)
-          setButton(true)
+          setButton(true);
           // return
           if (
             response.data.user.role === "user" &&
@@ -78,6 +73,7 @@ const Login = () => {
             return history.push("/dashboard/user/user-credentials");
           }
           if (response.data.user.role === "admin") {
+            window.location.reload();
             return history.push("/dashboard/admin");
           } else if (response.data.user.role === "user") {
             return history.push("/dashboard/user");
@@ -240,7 +236,6 @@ const Login = () => {
                                 disabled={buttonAction}
                               >
                                 {isLoading ? "Loading" : "Login"}
-                                
                               </CButton>
                               <br />
                               <Link to="/forggotten-password" className="px-0">
