@@ -11,7 +11,7 @@ class Layout extends Component {
     super(props);
 
     this.state = {
-      timeout: 1000 * 15 * 1,
+      timeout: 1000 * 150 * 1,
       showModal: false,
       userLoggedIn: false,
       isTimedOut: false,
@@ -40,6 +40,9 @@ class Layout extends Component {
       window.localStorage.removeItem("userId");
       window.localStorage.removeItem("loggedIn");
       Cookies.remove("token");
+
+      // this.props.history.push("/login");
+      window.location.reload();
     } else {
       this.idleTimer.reset();
       this.setState({ isTimedOut: false });
