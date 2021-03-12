@@ -44,7 +44,7 @@ const TheHeaderDropdown = () => {
     window.localStorage.removeItem("loggedIn");
     Cookies.remove("token");
 
-    return <Redirect to="https://www.rillbitoption.com/login" />;
+    <Redirect to="/login" />;
   };
 
   return (

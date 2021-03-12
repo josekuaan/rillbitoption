@@ -69,13 +69,12 @@ const Login = () => {
             response.data.user.role === "user" &&
             response.data.user.status === false
           ) {
-            console.log(true);
             return history.push("/dashboard/user/user-credentials");
           }
           if (response.data.user.role === "admin") {
-            return <Redirect to="/dashboard/admin" />;
+            return history.push("/dashboard/admin");
           } else if (response.data.user.role === "user") {
-            return <Redirect to="/dashboard/user" />;
+            return history.push("/dashboard/user");
           }
         } else if (!response.data.success) {
           setError(response.data.msg);
