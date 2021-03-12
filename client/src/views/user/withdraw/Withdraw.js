@@ -102,7 +102,7 @@ const Withdraw = () => {
         setTimeout(() => {
           setResponse(null);
         }, 6000);
-        return history.push("/user/dashboard/user-log");
+        return history.push("/dashboard/user/user-log");
       } else {
         setResponse(false);
         setErr(response.data.msg);
