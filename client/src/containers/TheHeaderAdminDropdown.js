@@ -43,11 +43,9 @@ const TheHeaderAdminDropdown = () => {
     window.localStorage.removeItem("userId");
     window.localStorage.removeItem("loggedIn");
     Cookies.remove("token");
-    <Redirect to="/login" />;
+    window.location.reload();
   };
-  // if (isLoggedIn === null) {
 
-  // }
   return (
     <CDropdown inNav className="c-header-nav-items mx-2" direction="down">
       <CDropdownToggle className="c-header-nav-link" caret={false}>

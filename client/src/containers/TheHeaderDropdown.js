@@ -43,8 +43,7 @@ const TheHeaderDropdown = () => {
     window.localStorage.removeItem("userId");
     window.localStorage.removeItem("loggedIn");
     Cookies.remove("token");
-
-    <Redirect to="/login" />;
+    window.location.reload();
   };
 
   return (
