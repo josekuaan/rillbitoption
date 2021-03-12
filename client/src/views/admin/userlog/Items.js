@@ -95,7 +95,8 @@ export default function Items() {
                 rel="tooltip"
                 title="edit user"
               >
-                <i className="fill fa fa-pencil"></i>
+                <i class="fas fa-user-edit"></i>
+                {/* <i className="fill fa fa-pencil"></i> */}
               </Link>
               <Link
                 to="#"

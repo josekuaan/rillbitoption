@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch,Redirect } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import IdleTimer from "react-idle-timer";
 import Cookies from "js-cookie";
 
@@ -11,8 +11,8 @@ class Layout extends Component {
     super(props);
 
     this.state = {
-      timeout: 1000 * 150 * 1,
-      showModal: false,   
+      timeout: 1000 * 15 * 1,
+      showModal: false,
       userLoggedIn: false,
       isTimedOut: false,
     };
@@ -21,7 +21,6 @@ class Layout extends Component {
     this.onAction = this._onAction.bind(this);
     this.onActive = this._onActive.bind(this);
     this.onIdle = this._onIdle.bind(this);
-    
   }
 
   _onAction(e) {
@@ -36,22 +35,20 @@ class Layout extends Component {
 
   _onIdle(e) {
     console.log("user is idle", e);
-     this.state.isTimedOut = true
+    this.state.isTimedOut = true;
     if (this.state.isTimedOut) {
-        
-        window.localStorage.removeItem("userId");
-        window.localStorage.removeItem("loggedIn");
-        Cookies.remove("token");
+      window.localStorage.removeItem("userId");
+      window.localStorage.removeItem("loggedIn");
+      Cookies.remove("token");
     } else {
       this.idleTimer.reset();
       this.setState({ isTimedOut: false });
-      
     }
   }
   render() {
     const isLoggedIn = window.localStorage.getItem("loggedIn");
     if (isLoggedIn === null) {
-      return <Redirect to="/login" />;  
+      return <Redirect to="/login" />;
     }
     return (
       <>
@@ -85,5 +82,4 @@ class Layout extends Component {
   }
 }
 
-
-export default Layout
+export default Layout;
