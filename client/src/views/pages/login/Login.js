@@ -74,7 +74,7 @@ const Login = () => {
           }
           if (response.data.user.role === "admin") {
             window.location.reload();
-            return history.push("/dashboard/admin");
+            return <Redirect to="/dashboard/admin" />;
           } else if (response.data.user.role === "user") {
             return history.push("/dashboard/user");
           }
