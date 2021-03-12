@@ -1,9 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 import "./style.css";
 
 export default function Invest() {
+  const isLoggedIn = window.localStorage.getItem("loggedIn");
+  if (isLoggedIn === null) {
+    return <Redirect to="/login" />;
+  }
   return (
     <div className="body-content">
       <div className="row">

@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
+import { Redirect } from "react-router-dom";
 import Cookies from "js-cookie";
 import Swal from "sweetalert/dist/sweetalert.min.js";
 import { WalletContext } from "../../../pageContext";
@@ -9,7 +10,7 @@ import BASE_URL from "src/base_url";
 
 export default function Content() {
   const { currentuser } = useContext(WalletContext);
-
+  const isLoggedIn = window.localStorage.getItem("loggedIn");
   const [ID, setId] = useState("");
   const [number, setNumber] = useState("");
   const [dob, setDob] = useState("");
@@ -73,7 +74,7 @@ export default function Content() {
             icon: "success",
             button: "Ok",
           });
-          setButton(true)
+          setButton(true);
           setTimeout(() => {
             setResponse(false);
             setText("Update account");
@@ -92,7 +93,9 @@ export default function Content() {
         }, 5000);
       });
   };
-  console.log(currentuser);
+  if (isLoggedIn === null) {
+    return <Redirect to="/login" />;
+  }
   return (
     <div className="body-content">
       {err.length > 1 ? (
@@ -120,11 +123,7 @@ export default function Content() {
               ) : (
                 <div>
                   {currentuser[0].status === false ? (
-                    <div
-                      className="pending"
-                    >
-                      Pending
-                    </div>
+                    <div className="pending">Pending</div>
                   ) : (
                     <div
                       style={{
@@ -229,7 +228,9 @@ export default function Content() {
                 </div>
                 <input
                   type="submit"
-                  className={`btn  btn-fill btn-wd ${buttonAction ? 'btn-default' : 'btn-info'}`}
+                  className={`btn  btn-fill btn-wd ${
+                    buttonAction ? "btn-default" : "btn-info"
+                  }`}
                   style={{ marginBottom: "10px" }}
                   value={text}
                   disabled={buttonAction}

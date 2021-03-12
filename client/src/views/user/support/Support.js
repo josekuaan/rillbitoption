@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import Swal from 'sweetalert'
+import { Link, Redirect } from "react-router-dom";
+import Swal from "sweetalert";
 import {
   CButton,
   CCard,
@@ -19,6 +19,7 @@ import "../../style.css";
 import BASE_URL from "src/base_url";
 
 const Support = () => {
+  const isLoggedIn = window.localStorage.getItem("loggedIn");
   const [collapsed] = React.useState(true);
   const [showElements] = React.useState(true);
   const [subject, setSubject] = useState("");
@@ -54,7 +55,7 @@ const Support = () => {
     }).then(function (response) {
       if (response.data.success) {
         setSuccess(true);
-        setButton(true)
+        setButton(true);
         Swal({
           title: "Good job!",
           text: "Your email was sent successful.",
@@ -72,12 +73,13 @@ const Support = () => {
       }
     });
   };
-
+  if (isLoggedIn === null) {
+    return <Redirect to="/login" />;
+  }
   return (
     <>
       <CRow>
         <CCol xs="12">
-        
           <CFade timeout={300} in={showElements} unmountOnExit={true}>
             <CCard>
               <CCardHeader>
@@ -122,7 +124,7 @@ const Support = () => {
                             </p>
                             <hr />
 
-                            <div >
+                            <div>
                               <ul
                                 style={{
                                   listStyle: "none",
@@ -188,7 +190,11 @@ const Support = () => {
                               </div>
                               <CCol xs="12">
                                 <div className="form-actions">
-                                  <CButton type="submit" color="primary" disabled={buttonAction}>
+                                  <CButton
+                                    type="submit"
+                                    color="primary"
+                                    disabled={buttonAction}
+                                  >
                                     Save changes
                                   </CButton>
                                 </div>

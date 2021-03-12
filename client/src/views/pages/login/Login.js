@@ -94,10 +94,10 @@ const Login = () => {
         setError(error.response.data.msg);
         console.log(error);
         if (error.response === undefined) {
-          // setLoading(false);
-          // return setError(
-          //   "Could not connect to the server, check your network"
-          // );
+          setLoading(false);
+          return setError(
+            "Could not connect to the server, check your network"
+          );
         } else {
           console.log(error.response);
           // setError(error.response.data.msg);

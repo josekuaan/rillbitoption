@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import * as moment from "moment";
 import { WalletContext } from "../../../pageContext";
 import axios from "axios";
@@ -11,6 +11,7 @@ import BASE_URL from "src/base_url";
 
 export default function Content() {
   const token = Cookies.get("token");
+  const isLoggedIn = window.localStorage.getItem("loggedIn");
   const { setEditAccount, EditAccount } = useContext(WalletContext);
   const [picture, setProfilePic] = useState("");
   const [fullName, setFullName] = useState("");
@@ -32,6 +33,7 @@ export default function Content() {
 
   const fetchData = async () => {
     const userId = window.localStorage.getItem("userId");
+
     const token = Cookies.get("token");
     const config = {
       headers: {
@@ -41,14 +43,11 @@ export default function Content() {
         Authorization: `Bearer ${token}`,
       },
     };
-    console.log(userId)
+    console.log(userId);
     axios
-      .get(
-        `${BASE_URL}/api/user/auth/getMe/${userId}`,
-        config
-      )
+      .get(`${BASE_URL}/api/user/auth/getMe/${userId}`, config)
       .then(function (response) {
-        console.log(response.data)
+        console.log(response.data);
         // handle success
         setFullName(response.data.msg.fullName);
         setEmail(response.data.msg.email);
@@ -61,7 +60,7 @@ export default function Content() {
         // setPostal()
         setCity(response.data.msg.city);
         setProfilePic(response.data.msg.picture);
-console.log('id',response.data.msg._id)
+        console.log("id", response.data.msg._id);
         axios
           .get(
             `${BASE_URL}/api/investment/single-users-investment/${response.data.msg._id}`
@@ -95,7 +94,7 @@ console.log('id',response.data.msg._id)
   const handleSubmit = async (event) => {
     event.preventDefault();
     const userId = window.localStorage.getItem("userId");
-    setButton(true)
+    setButton(true);
     const formData = new FormData();
     formData.append("photo", picture);
     formData.append(
@@ -136,15 +135,17 @@ console.log('id',response.data.msg._id)
             button: "Ok",
           });
           setProfilePic(response.data.result.picture);
-          
         }
       });
-      if (isLoading) {
-        setTimeout(() => {
-          setLoading(!isLoading);
-        }, 1000);
-      }
+    if (isLoading) {
+      setTimeout(() => {
+        setLoading(!isLoading);
+      }, 1000);
+    }
   };
+  if (isLoggedIn === null) {
+    return <Redirect to="/login" />;
+  }
   return (
     <div className="body-content">
       <div className="row">
@@ -406,14 +407,15 @@ console.log('id',response.data.msg._id)
                     </Link>
                     <input
                       type="submit"
-                      className={`update ${buttonAction ? 'btn-default' : 'btn-info'}`}
+                      className={`update ${
+                        buttonAction ? "btn-default" : "btn-info"
+                      }`}
                       style={{
                         borderRadius: 2,
                         border: "none",
                         color: "#fff",
                       }}
                       onClick={() => setLoading(!isLoading)}
-                        
                       value={isLoading ? "Updating" : "Update Profile"}
                       disabled={buttonAction}
                     />

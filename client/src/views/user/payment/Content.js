@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import * as moment from "moment";
 
 import { WalletContext } from "../../../pageContext";
@@ -11,6 +11,7 @@ import BASE_URL from "src/base_url";
 
 export default function Content() {
   const { payment, setPayment } = useContext(WalletContext);
+  const isLoggedIn = window.localStorage.getItem("loggedIn");
   const userId = window.localStorage.getItem("userId");
   const token = Cookies.get("token");
   function printDiv(divName) {
@@ -36,9 +37,9 @@ export default function Content() {
     },
   };
   useEffect(() => {
-    let isMounted = true
+    let isMounted = true;
     fetchData();
-    return () => isMounted = false 
+    return () => (isMounted = false);
   }, []);
 
   const fetchData = async () => {
@@ -53,9 +54,9 @@ export default function Content() {
         }
       });
   };
-  // if (!isLoggedIn) {
-  //   return <Redirect to="/login" />;
-  // }
+  if (isLoggedIn === null) {
+    return <Redirect to="/login" />;
+  }
   return (
     <div className="body-content">
       <center className="col-md-8" style={{ margin: "auto" }}>
