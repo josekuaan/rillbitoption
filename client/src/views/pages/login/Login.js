@@ -75,12 +75,13 @@ const Login = () => {
             );
           }
           if (response.data.user.role === "admin") {
-            window.location.reload();
             return (
               <Redirect to="https://www.rillbitoption.com/dashboard/admin" />
             );
           } else if (response.data.user.role === "user") {
-            return history.push("https://www.rillbitoption.com/dashboard/user");
+            return (
+              <Redirect to="https://www.rillbitoption.com/dashboard/user" />
+            );
           }
         } else if (!response.data.success) {
           setError(response.data.msg);
