@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Redirect } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import Cookies from "js-cookie";
@@ -31,7 +31,7 @@ const Withdraw = () => {
   const [collapsed] = React.useState(true);
   const [showElements] = React.useState(true);
   let history = useHistory();
-
+  const isLoggedIn = window.localStorage.getItem("loggedIn");
   const { catLog, setCatLog, setPayment } = useContext(WalletContext);
   const [method, setselectedOption] = useState("");
   const [amount, setAount] = useState("000");
@@ -90,7 +90,7 @@ const Withdraw = () => {
     }).then(function (response) {
       if (response.data.success) {
         setLoading(false);
-        setButton(true)
+        setButton(true);
         setCatLog([...catLog, response.data.invest]);
         setPayment(response.data.invest);
         Swal({
@@ -119,6 +119,9 @@ const Withdraw = () => {
     }
   };
 
+  if (isLoggedIn === null) {
+    return <Redirect to="/login" />;
+  }
   return (
     <>
       <CRow>

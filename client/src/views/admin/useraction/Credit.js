@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, Redirect } from "react-router-dom";
 import * as moment from "moment";
 import axios from "axios";
 import Cookies from "js-cookie";
@@ -13,7 +13,7 @@ export default function Credit() {
   const { setCreditAccount, creditAccount } = useContext(WalletContext);
   const token = Cookies.get("token");
   let history = useHistory();
-
+  const isLoggedIn = window.localStorage.getItem("loggedIn");
   const [interest, setInterest] = useState("");
   const [wallet, setWithdraw] = useState("");
   const [status, setChecked] = useState("");
@@ -71,7 +71,9 @@ export default function Credit() {
       setButton(!buttonAction);
     });
   };
-
+  if (isLoggedIn === null) {
+    return <Redirect to="/login" />;
+  }
   return (
     <div className="container-fluid">
       <div className="row">
@@ -242,7 +244,9 @@ export default function Credit() {
                     <input
                       type="submit"
                       onClick={handleSubmit}
-                      className={`update ${buttonAction ? 'btn-default' : 'btn-info'}`}
+                      className={`update ${
+                        buttonAction ? "btn-default" : "btn-info"
+                      }`}
                       style={{
                         borderRadius: 2,
                         border: "none",

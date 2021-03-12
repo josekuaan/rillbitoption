@@ -1,5 +1,5 @@
 import React, { useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { WalletContext } from "../../../pageContext";
@@ -10,6 +10,7 @@ import BASE_URL from "src/base_url";
 
 export default function Log() {
   const token = Cookies.get("token");
+  const isLoggedIn = window.localStorage.getItem("loggedIn");
   const { setUserAction, userAction } = useContext(WalletContext);
 
   useEffect(async () => {
@@ -26,10 +27,7 @@ export default function Log() {
 
   const fetchData = async () => {
     axios
-      .get(
-        `${BASE_URL}/api/investment/users-investment`,
-        config
-      )
+      .get(`${BASE_URL}/api/investment/users-investment`, config)
       .then(function (response) {
         if (response.data.success) {
           console.log(response.data);
@@ -37,6 +35,9 @@ export default function Log() {
         }
       });
   };
+  if (isLoggedIn === null) {
+    return <Redirect to="/login" />;
+  }
   return (
     <div className="row">
       <div className="col-md-12">

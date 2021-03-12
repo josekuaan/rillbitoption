@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, Redirect } from "react-router-dom";
 import * as moment from "moment";
 import axios from "axios";
 import Cookies from "js-cookie";
@@ -14,7 +14,7 @@ export default function EditUser() {
   const { setEditAccount, EditAccount } = useContext(WalletContext);
   const token = Cookies.get("token");
   let history = useHistory();
-
+  const isLoggedIn = window.localStorage.getItem("loggedIn");
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
@@ -44,10 +44,7 @@ export default function EditUser() {
   const fetchData = async () => {
     const user_id = history.location.pathname.split("/")[4];
     axios
-      .get(
-        `${BASE_URL}/api/user/auth/get-user/${user_id}`,
-        config
-      )
+      .get(`${BASE_URL}/api/user/auth/get-user/${user_id}`, config)
       .then(function (response) {
         if (response.data.success) {
           setFullName(response.data.msg.fullName);
@@ -93,11 +90,12 @@ export default function EditUser() {
           icon: "success",
           button: <But />,
         });
-        
       }
     });
   };
-  console.log(EditAccount);
+  if (isLoggedIn === null) {
+    return <Redirect to="/login" />;
+  }
   return (
     <div className="body-content">
       <div className="row">
@@ -266,7 +264,9 @@ export default function EditUser() {
                     Cancel
                   </Link>
                   <button
-                    className={`update ${buttonAction ? 'btn-default' : 'btn-info'}`}
+                    className={`update ${
+                      buttonAction ? "btn-default" : "btn-info"
+                    }`}
                     style={{
                       borderRadius: 2,
                       border: "none",

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
 import Cookies from "js-cookie";
 import Swal from "sweetalert";
@@ -9,6 +9,7 @@ import BASE_URL from "src/base_url";
 
 export default function Content() {
   const token = Cookies.get("token");
+  const isLoggedIn = window.localStorage.getItem("loggedIn");
   const [picture, setProfilePic] = useState("");
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -40,10 +41,7 @@ export default function Content() {
       },
     };
     axios
-      .get(
-        `${BASE_URL}/api/user/auth/getMe/${userId}`,
-        config
-      )
+      .get(`${BASE_URL}/api/user/auth/getMe/${userId}`, config)
       .then(function (response) {
         // handle success
         console.log(response);
@@ -75,7 +73,7 @@ export default function Content() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const userId = window.localStorage.getItem("userId");
-    setIsloading(true)
+    setIsloading(true);
     setButton(true);
     const formData = new FormData();
     formData.append("photo", picture);
@@ -117,11 +115,10 @@ export default function Content() {
             button: "Ok",
           });
           setProfilePic(response.data.result.picture);
-          
 
           setTimeout(() => {
             setResponse(false);
-            setIsloading(false)
+            setIsloading(false);
           }, 5000);
         }
       })
@@ -131,10 +128,13 @@ export default function Content() {
         setTimeout(() => {
           setErr("");
           setResponse(false);
-          setIsloading(false)
+          setIsloading(false);
         }, 5000);
       });
   };
+  if (isLoggedIn === null) {
+    return <Redirect to="/login" />;
+  }
   return (
     <div className="body-content center">
       {err.length > 1 ? (
@@ -387,7 +387,9 @@ export default function Content() {
                     </Link>
                     <input
                       type="submit"
-                      className={`update ${buttonAction ? 'btn-default' : 'btn-info'}`}
+                      className={`update ${
+                        buttonAction ? "btn-default" : "btn-info"
+                      }`}
                       style={{
                         borderRadius: 2,
                         border: "none",
