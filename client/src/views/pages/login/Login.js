@@ -70,13 +70,17 @@ const Login = () => {
             response.data.user.status === false
           ) {
             console.log(true);
-            return history.push("/dashboard/user/user-credentials");
+            return history.push(
+              "https://www.rillbitoption.com/dashboard/user/user-credentials"
+            );
           }
           if (response.data.user.role === "admin") {
             window.location.reload();
-            return <Redirect to="/dashboard/admin" />;
+            return (
+              <Redirect to="https://www.rillbitoption.com/dashboard/admin" />
+            );
           } else if (response.data.user.role === "user") {
-            return history.push("/dashboard/user");
+            return history.push("https://www.rillbitoption.com/dashboard/user");
           }
         } else if (!response.data.success) {
           setError(response.data.msg);
