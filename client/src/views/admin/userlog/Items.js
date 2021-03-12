@@ -80,37 +80,46 @@ export default function Items() {
           <td>{`${lo.email}`}</td>
           <td>{`${lo.userName}`}</td>
           <td>{moment(`${lo.createdAt}`).format("DD/ MM /YYYY")}</td>
-          {
-            <td style={{ display: "flex", justifyContent: "space-around" }}>
-              <Link
-                to="#"
-                rel="tooltip"
-                title="delete user"
-                onClick={handleDelete(lo._id)}
-              >
-                <i class="fas fa-window-close"></i>
-                {/* <i className="fill2  fa fa-close"></i> */}
-              </Link>
-              <Link
-                to={`/dashboard/admin/edit-user/${lo._id}`}
-                rel="tooltip"
-                title="edit user"
-              >
-                <i class="fas fa-user-edit"></i>
-                {/* <i className="fill fa fa-pencil"></i> */}
-              </Link>
-              <Link
-                to="#"
-                rel="tooltip"
-                onClick={approveHandler(lo._id)}
-                title="Approved"
-              >
-                <i
-                  className={` ${lo.status ? " fill" : "fill2 "} fa fa-check`}
-                ></i>
-              </Link>
-            </td>
-          }
+          <td style={{ padding: "0rem" }}>
+            {/* {lo.status ? <td style={{color:'green'}}>Approve</td> : <td style={{color:'red'}}>Pending</td>} */}
+            <tr>
+              <td style={{ border: "none" }}>
+                <Link
+                  to="#"
+                  rel="tooltip"
+                  title="delete user"
+                  onClick={handleDelete(lo._id)}
+                >
+                  <i class="fas fa-window-close"></i>
+                  {/* <i className="fa fa-close fill2"></i> */}
+                </Link>
+              </td>
+              <td style={{ border: "none" }}>
+                <Link
+                  to={`/dashboard/admin/credit-user/${lo._id}`}
+                  rel="tooltip"
+                  title="edit user"
+                >
+                  <i class="fas fa-user-edit"></i>
+                  {/* <i className="fill fa fa-pencil"></i> */}
+                </Link>
+              </td>
+              <td style={{ border: "none" }}>
+                <Link
+                  to="#"
+                  rel="tooltip"
+                  onClick={approveHandler(lo._id)}
+                  title="Approved"
+                >
+                  <i
+                    className={` ${
+                      lo.status ? " fill" : " fas fa-check-square"
+                    } fas fa-check-square`}
+                  ></i>
+                </Link>
+              </td>
+            </tr>
+          </td>
         </tr>
       ))}
     </>
