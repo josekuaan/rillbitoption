@@ -65,10 +65,12 @@ app.use(
       imgSrc: [
         "'self'",
         "http://www.w3.org",
+        "https://www.google.com",
         "https://www.gstatic.com/",
         "https://chart.googleapis.com",
         "https://e-capitaloption.com/",
         "https://secure.trust-provider.com",
+        "https://translate.googleapis.com",
         "data:",
       ],
       baseUri: ["'self'", " https://www.rillbitoption.com/"],
