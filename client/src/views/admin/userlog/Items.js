@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import * as moment from "moment";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -9,7 +9,7 @@ import BASE_URL from "src/base_url";
 
 export default function Items() {
   const { users, setUsers } = useContext(WalletContext);
-  const token = Cookies.get("token");
+  const token = localStorage.getItem("token");
   const config = {
     headers: {
       "Content-Type": "application/json",
@@ -90,7 +90,7 @@ export default function Items() {
                   title="delete user"
                   onClick={handleDelete(lo._id)}
                 >
-                  <i class="fas fa-window-close"></i>
+                  <i className="fas fa-window-close"></i>
                   {/* <i className="fa fa-close fill2"></i> */}
                 </Link>
               </td>
@@ -100,7 +100,7 @@ export default function Items() {
                   rel="tooltip"
                   title="edit user"
                 >
-                  <i class="fas fa-user-edit"></i>
+                  <i className="fas fa-user-edit"></i>
                   {/* <i className="fill fa fa-pencil"></i> */}
                 </Link>
               </td>

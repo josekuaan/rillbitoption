@@ -11,7 +11,7 @@ import BASE_URL from "src/base_url";
 
 export default function Credit() {
   const { setCreditAccount, creditAccount } = useContext(WalletContext);
-  const token = Cookies.get("token");
+  const token = localStorage.getItem("token");
   let history = useHistory();
   const isLoggedIn = window.localStorage.getItem("loggedIn");
   const [interest, setInterest] = useState("");
@@ -72,7 +72,7 @@ export default function Credit() {
     });
   };
   if (isLoggedIn === null) {
-    return <Redirect to="/login" />;
+    return <Redirect to="/" />;
   }
   return (
     <div className="container-fluid">

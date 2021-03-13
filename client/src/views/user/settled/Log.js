@@ -9,13 +9,15 @@ import BASE_URL from "src/base_url";
 
 export default function Log() {
   const { setSettled, settled } = useContext(WalletContext);
-  const token = Cookies.get("token");
+  const token = localStorage.getItem("token");
   const userId = window.localStorage.getItem("userId");
 
   useEffect(() => {
-    let isMounted = true
+    let isMounted = true;
     fetchData();
-    return () => { isMounted = false }
+    return () => {
+      isMounted = false;
+    };
   }, []);
   const config = {
     headers: {

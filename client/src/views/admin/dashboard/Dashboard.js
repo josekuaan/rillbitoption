@@ -17,7 +17,7 @@ const Dashboard = () => {
   } = useContext(WalletContext);
   const userId = window.localStorage.getItem("userId");
   const isLoggedIn = window.localStorage.getItem("loggedIn");
-  const token = Cookies.get("token");
+  const token = localStorage.getItem("token");
   console.log(token);
   useEffect(async () => {
     fetchData();

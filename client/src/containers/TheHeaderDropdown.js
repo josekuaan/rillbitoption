@@ -40,9 +40,7 @@ const TheHeaderDropdown = () => {
       });
   };
   const handleLogout = () => {
-    window.localStorage.removeItem("userId");
-    window.localStorage.removeItem("loggedIn");
-    Cookies.remove("token");
+    window.localStorage.clear();
     window.location.reload();
   };
 

@@ -69,7 +69,7 @@ const Deposit = () => {
       return setLoading(!isLoading);
     }
     const userId = window.localStorage.getItem("userId");
-    const token = Cookies.get("token");
+    const token = localStorage.getItem("token");
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -116,7 +116,7 @@ const Deposit = () => {
     }
   };
   if (isLoggedIn === null) {
-    return <Redirect to="/login" />;
+    return <Redirect to="/" />;
   }
   return (
     <>

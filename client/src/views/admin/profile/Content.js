@@ -8,7 +8,7 @@ import "../../style.css";
 import BASE_URL from "src/base_url";
 
 export default function Content() {
-  const token = Cookies.get("token");
+  const token = localStorage.getItem("token");
   const isLoggedIn = window.localStorage.getItem("loggedIn");
   const [picture, setProfilePic] = useState("");
   const [fullName, setFullName] = useState("");
@@ -133,7 +133,7 @@ export default function Content() {
       });
   };
   if (isLoggedIn === null) {
-    return <Redirect to="/login" />;
+    return <Redirect to="/" />;
   }
   return (
     <div className="body-content center">

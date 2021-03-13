@@ -37,21 +37,18 @@ class Layout extends Component {
     console.log("user is idle", e);
     this.state.isTimedOut = true;
     if (this.state.isTimedOut) {
-      window.localStorage.removeItem("userId");
-      window.localStorage.removeItem("loggedIn");
-      Cookies.remove("token");
+      window.localStorage.clear();
       window.location.reload();
-      return <Redirect to="/login" />;
     } else {
       this.idleTimer.reset();
       this.setState({ isTimedOut: false });
     }
   }
   render() {
-    // const isLoggedIn = window.localStorage.getItem("loggedIn");
-    // if (isLoggedIn === null) {
-
-    // }
+    const isLoggedIn = window.localStorage.getItem("loggedIn");
+    if (isLoggedIn === null) {
+      return <Redirect to="/" />;
+    }
     return (
       <>
         <IdleTimer

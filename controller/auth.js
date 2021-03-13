@@ -77,7 +77,7 @@ exports.login = async (req, res) => {
 
   const isMatch = await user.comparePassword(password);
 
-  if (!isMatch)  
+  if (!isMatch)
     return res.status(400).json({ success: false, msg: "Incorrect Password" });
   sendTokenResponse(user, 200, res);
 };
@@ -94,10 +94,7 @@ async function sendTokenResponse(user, statusCode, res) {
   if (process.env.NODE_ENV === "production") {
     options.secure = true;
   }
-  return res
-    .status(statusCode)
-    .cookie("token", token, options)
-    .json({ success: true, token, user });
+  return res.status(statusCode).json({ success: true, token, user });
 }
 
 //@desc    Get currently login user
@@ -203,7 +200,6 @@ exports.updateUserDetails = async (req, res, next) => {
 //@access  Private
 
 exports.updateUserDetails = async (req, res, next) => {
-
   const user = await User.findById(req.params.id);
 
   if (!user)
@@ -229,7 +225,6 @@ exports.updateUserDetails = async (req, res, next) => {
 //@route   DELETE /api/v1/bootcamp/:id
 //@access  Private
 exports.deleteUser = async (req, res, next) => {
-  
   const user = await User.findById(req.params.id);
 
   if (!user)
@@ -272,7 +267,6 @@ exports.resetPassword = async (req, res, next) => {
 //@route   POST /api/v1/auth/forgotpassword
 //@access  Private
 exports.forgotPassword = async (req, res, next) => {
-  
   const user = await User.findOne({ email: req.body.email }).select(
     "+password"
   );
@@ -283,8 +277,7 @@ exports.forgotPassword = async (req, res, next) => {
   //Get reset token
   const getResetToken = await user.getResetPasswordToken();
   await user.save({ validateBeforeSave: false });
-   
-   
+
   //Create reset url
 
   const resetUrl = `https://eloquent-kowalevski-7a4ef7.netlify.app/#/reset-password/${getResetToken}`;
@@ -294,24 +287,23 @@ exports.forgotPassword = async (req, res, next) => {
   // console.log('========',message);
 
   try {
-     sendEmail({
+    sendEmail({
       email: user.email,
       subject: "Password reset token",
       message: message,
-      res
+      res,
     });
-    
 
-     res
-      .status(200)
-      .json({ success: true, data: "Email sent"});
+    res.status(200).json({ success: true, data: "Email sent" });
   } catch (err) {
     user.resetPasswordToken = undefined;
     user.resetPasswordExpire = undefined;
 
     user.save({ validateBeforeSave: false });
 
-    return res.status(500).json({ success: false, data: "Email could not be sent" });
+    return res
+      .status(500)
+      .json({ success: false, data: "Email could not be sent" });
   }
 };
 //@desc    Upload bootcamp photo
@@ -351,7 +343,7 @@ exports.uploadUserPhoto = async (req, res, next) => {
   const updates = {
     IdentificationCard: ID,
     IdNumber: number,
-    dateIssued: dob,  
+    dateIssued: dob,
     photo: [req.body.photo[0], req.body.photo[1]],
   };
 

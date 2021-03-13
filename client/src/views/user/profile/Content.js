@@ -48,7 +48,7 @@ export default function Content() {
     formData.append("text", JSON.stringify({ ID, number, dob }));
 
     const userId = window.localStorage.getItem("userId");
-    const token = Cookies.get("token");
+    const token = localStorage.getItem("token");
 
     const config = {
       headers: {

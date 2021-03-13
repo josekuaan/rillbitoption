@@ -12,7 +12,7 @@ import BASE_URL from "src/base_url";
 
 export default function EditUser() {
   const { setEditAccount, EditAccount } = useContext(WalletContext);
-  const token = Cookies.get("token");
+  const token = localStorage.getItem("token");
   let history = useHistory();
   const isLoggedIn = window.localStorage.getItem("loggedIn");
   const [fullName, setFullName] = useState("");

@@ -10,8 +10,8 @@ import "../../style.css";
 import BASE_URL from "src/base_url";
 
 export default function Content() {
-  const token = Cookies.get("token");
   const isLoggedIn = window.localStorage.getItem("loggedIn");
+  const token = localStorage.getItem("token");
   const { setEditAccount, EditAccount } = useContext(WalletContext);
   const [picture, setProfilePic] = useState("");
   const [fullName, setFullName] = useState("");
@@ -34,7 +34,6 @@ export default function Content() {
   const fetchData = async () => {
     const userId = window.localStorage.getItem("userId");
 
-    const token = Cookies.get("token");
     const config = {
       headers: {
         "Content-Type": "application/json",

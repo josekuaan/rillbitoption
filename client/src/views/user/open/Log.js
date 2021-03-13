@@ -9,15 +9,17 @@ import Items from "./Items";
 import BASE_URL from "src/base_url";
 
 export default function Log() {
-  const token = Cookies.get("token");
+  const token = localStorage.getItem("token");
   const { setCatLog, catLog } = useContext(WalletContext);
 
   const userId = window.localStorage.getItem("userId");
 
   useEffect(async () => {
-    let isMounted = true
+    let isMounted = true;
     fetchData();
-    return () => { isMounted = false }
+    return () => {
+      isMounted = false;
+    };
   }, []);
   const config = {
     headers: {
@@ -30,10 +32,7 @@ export default function Log() {
 
   const fetchData = async () => {
     axios
-      .get(
-        `${BASE_URL}/api/investment/users-investment/${userId}`,
-        config
-      )
+      .get(`${BASE_URL}/api/investment/users-investment/${userId}`, config)
       .then(function (response) {
         if (response.data.success) {
           console.log(response);
@@ -48,7 +47,7 @@ export default function Log() {
           <div className="card-header">
             <h3 className="card-title">Bordered Table</h3>
           </div>
-        
+
           {catLog.length === 0 ? (
             <div className=" table-responsive">
               <table

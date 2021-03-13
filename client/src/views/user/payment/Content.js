@@ -13,7 +13,7 @@ export default function Content() {
   const { payment, setPayment } = useContext(WalletContext);
   const isLoggedIn = window.localStorage.getItem("loggedIn");
   const userId = window.localStorage.getItem("userId");
-  const token = Cookies.get("token");
+  const token = localStorage.getItem("token");
   function printDiv(divName) {
     console.log(divName);
     var printContents = document.getElementById(divName).innerHTML;

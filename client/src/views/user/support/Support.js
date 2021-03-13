@@ -37,8 +37,7 @@ const Support = () => {
     console.log(data);
 
     const userId = window.localStorage.getItem("userId");
-    const token = Cookies.get("token");
-
+    const token = localStorage.getItem("token");
     const config = {
       headers: {
         "Content-Type": "application/json",
