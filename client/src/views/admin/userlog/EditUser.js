@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link, useHistory, Redirect } from "react-router-dom";
 import * as moment from "moment";
 import axios from "axios";
-import Cookies from "js-cookie";
 
 import Swal from "sweetalert";
 

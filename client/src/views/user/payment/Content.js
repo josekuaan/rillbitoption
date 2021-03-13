@@ -14,7 +14,6 @@ export default function Content() {
   const userId = window.localStorage.getItem("userId");
   const token = localStorage.getItem("token");
   function printDiv(divName) {
-    console.log(divName);
     var printContents = document.getElementById(divName).innerHTML;
     console.log(printContents);
 

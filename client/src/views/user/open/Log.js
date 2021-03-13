@@ -1,7 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import Cookies from "js-cookie";
 import { WalletContext } from "../../../pageContext";
 
 import "../../style.css";

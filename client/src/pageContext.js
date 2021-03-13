@@ -1,5 +1,4 @@
 import React, { useState, useEffect, createContext } from "react";
-import Cookies from "js-cookie";
 import BASE_URL from "./base_url";
 const axios = require("axios");
 
@@ -26,8 +25,6 @@ const DataProvider = (props) => {
   }, []);
 
   const getData = async () => {
-    const token = localStorage.getItem("token");
-    console.log("token", token);
     const config = {
       headers: {
         "Access-Control-Allow-Origin": "*",

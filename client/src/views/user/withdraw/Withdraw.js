@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { useHistory, Redirect } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
-import Cookies from "js-cookie";
+
 import Swal from "sweetalert";
 import "../../style.css";
 
@@ -44,7 +44,7 @@ const Withdraw = () => {
   const [buttonAction, setButton] = useState(false);
 
   const onValueChange = (e) => {
-    const { type, value } = e.target;
+    const { value } = e.target;
 
     if (e.target.value === "3") {
       console.log("ok");
@@ -59,6 +59,7 @@ const Withdraw = () => {
     const data = {
       method,
       amount,
+      details,
       type,
       txn: uuidv4(),
     };

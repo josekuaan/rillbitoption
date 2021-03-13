@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from "react";
 
 import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
-import Cookies from "js-cookie";
+
 import happy from "../../assets/icons/happiness.svg";
 import { WalletContext } from "../../pageContext";
 import "../style.css";
@@ -35,9 +35,7 @@ const Dashboard = () => {
     axios
       .get(`${BASE_URL}/api/user/auth/getMe/${userId}`, config)
       .then(function (response) {
-        console.log(response);
         if (response.data.success) {
-          // console.log(response)
           setCurrentUser([response.data.msg]);
         }
         axios
@@ -53,7 +51,6 @@ const Dashboard = () => {
           });
       });
   };
-  console.log(token);
   if (isLoggedIn === null) {
     return <Redirect to="/" />;
   }

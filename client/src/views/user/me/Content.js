@@ -3,7 +3,6 @@ import { Link, Redirect } from "react-router-dom";
 import * as moment from "moment";
 import { WalletContext } from "../../../pageContext";
 import axios from "axios";
-import Cookies from "js-cookie";
 import Swal from "sweetalert";
 
 import "../../style.css";
@@ -42,7 +41,6 @@ export default function Content() {
         Authorization: `Bearer ${token}`,
       },
     };
-    console.log(userId);
     axios
       .get(`${BASE_URL}/api/user/auth/getMe/${userId}`, config)
       .then(function (response) {
@@ -59,7 +57,7 @@ export default function Content() {
         // setPostal()
         setCity(response.data.msg.city);
         setProfilePic(response.data.msg.picture);
-        console.log("id", response.data.msg._id);
+
         axios
           .get(
             `${BASE_URL}/api/investment/single-users-investment/${response.data.msg._id}`

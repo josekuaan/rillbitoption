@@ -13,7 +13,6 @@ import {
 } from "@coreui/react";
 
 import axios from "axios";
-import Cookies from "js-cookie";
 
 import "../../style.css";
 import BASE_URL from "src/base_url";

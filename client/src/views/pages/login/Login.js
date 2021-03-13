@@ -62,7 +62,7 @@ const Login = () => {
           window.localStorage.setItem("userId", response.data.user._id);
           window.localStorage.setItem("loggedIn", true);
           window.localStorage.setItem("token", response.data.token);
-          window.location.reload();
+
           setButton(true);
           // return
           if (

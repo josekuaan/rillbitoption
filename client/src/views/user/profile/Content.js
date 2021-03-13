@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
-import Cookies from "js-cookie";
 import Swal from "sweetalert/dist/sweetalert.min.js";
 import { WalletContext } from "../../../pageContext";
 
@@ -11,6 +10,8 @@ import BASE_URL from "src/base_url";
 export default function Content() {
   const { currentuser } = useContext(WalletContext);
   const isLoggedIn = window.localStorage.getItem("loggedIn");
+  const userId = window.localStorage.getItem("userId");
+  const token = localStorage.getItem("token");
   const [ID, setId] = useState("");
   const [number, setNumber] = useState("");
   const [dob, setDob] = useState("");
@@ -46,9 +47,6 @@ export default function Content() {
     formData.append("photo", front);
     formData.append("photo", back);
     formData.append("text", JSON.stringify({ ID, number, dob }));
-
-    const userId = window.localStorage.getItem("userId");
-    const token = localStorage.getItem("token");
 
     const config = {
       headers: {

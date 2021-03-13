@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
-import Cookies from "js-cookie";
 import Swal from "sweetalert";
 
 import "../../style.css";
@@ -31,7 +30,6 @@ export default function Content() {
 
   const fetchData = async () => {
     const userId = window.localStorage.getItem("userId");
-    const token = Cookies.get("token");
     const config = {
       headers: {
         "Content-Type": "application/json",

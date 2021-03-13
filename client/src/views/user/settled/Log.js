@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from "react";
 
 import { Link } from "react-router-dom";
 import axios from "axios";
-import Cookies from "js-cookie";
 import { WalletContext } from "../../../pageContext";
 import Items from "./Items";
 import BASE_URL from "src/base_url";

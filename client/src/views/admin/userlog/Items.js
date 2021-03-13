@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import * as moment from "moment";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Cookies from "js-cookie";
 
 import { WalletContext } from "../../../pageContext";
 import BASE_URL from "src/base_url";
@@ -36,10 +35,7 @@ export default function Items() {
   const approveHandler = (id) => async () => {
     console.log(id, users);
     const action = users.filter((i) => i._id === id);
-
-    console.log(action);
     const data = { status: !action[0].status };
-    console.log(data);
 
     axios({
       method: "put",

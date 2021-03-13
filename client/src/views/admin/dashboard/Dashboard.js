@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from "react";
 
 import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
-import Cookies from "js-cookie";
+
 import { WalletContext } from "../../../pageContext";
 import happy from "../../../assets/icons/happiness.svg";
 import "../../style.css";
