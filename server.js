@@ -71,6 +71,7 @@ app.use(
         "https://e-capitaloption.com/",
         "https://secure.trust-provider.com",
         "https://translate.googleapis.com",
+        "https://translate.google.com",
         "data:",
       ],
       baseUri: ["'self'", " https://www.rillbitoption.com/"],
