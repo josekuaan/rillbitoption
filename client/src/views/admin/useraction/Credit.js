@@ -62,7 +62,7 @@ export default function Credit() {
       }
       Swal({
         title: "Good job!",
-        text: "Congrats! Your profile is 100%.",
+        text: "withdrawable,intrest set.",
         icon: "success",
         button: <But />,
       });

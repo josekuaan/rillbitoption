@@ -92,7 +92,7 @@ export default function Items() {
               </td>
               <td style={{ border: "none" }}>
                 <Link
-                  to={`/dashboard/admin/credit-user/${lo._id}`}
+                  to={`/dashboard/admin/edit-user/${lo._id}`}
                   rel="tooltip"
                   title="edit user"
                 >
