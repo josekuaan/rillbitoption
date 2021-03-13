@@ -26,6 +26,8 @@ const DataProvider = (props) => {
   }, []);
 
   const getData = async () => {
+    const token = localStorage.getItem("token");
+    console.log("token", token);
     const config = {
       headers: {
         "Access-Control-Allow-Origin": "*",
