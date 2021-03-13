@@ -62,6 +62,7 @@ const Login = () => {
           window.localStorage.setItem("userId", response.data.user._id);
           window.localStorage.setItem("loggedIn", true);
           window.localStorage.setItem("token", response.data.token);
+          window.location.reload();
           setButton(true);
           // return
           if (
@@ -71,10 +72,8 @@ const Login = () => {
             return history.push("/dashboard/user/user-credentials");
           }
           if (response.data.user.role === "admin") {
-            window.location.reload();
             return history.push("/dashboard/admin");
           } else if (response.data.user.role === "user") {
-            window.location.reload();
             return history.push("/dashboard/user");
           }
         } else if (!response.data.success) {
