@@ -9,7 +9,7 @@ import Items from "./Items";
 import BASE_URL from "src/base_url";
 
 export default function Log() {
-  const token = Cookies.get("token");
+  const token = localStorage.getItem("token");
   const isLoggedIn = window.localStorage.getItem("loggedIn");
   const { setUserAction, userAction } = useContext(WalletContext);
 
