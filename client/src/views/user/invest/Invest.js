@@ -6,7 +6,7 @@ import "./style.css";
 export default function Invest() {
   const isLoggedIn = window.localStorage.getItem("loggedIn");
   if (isLoggedIn === null) {
-    return <Redirect to="/login" />;
+    return <Redirect to="/" />;
   }
   return (
     <div className="body-content">

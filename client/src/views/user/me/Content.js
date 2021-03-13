@@ -143,7 +143,7 @@ export default function Content() {
     }
   };
   if (isLoggedIn === null) {
-    return <Redirect to="/login" />;
+    return <Redirect to="/" />;
   }
   return (
     <div className="body-content">

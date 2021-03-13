@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Redirect } from "react-router-dom";
+
 import axios from "axios";
-import Cookies from "js-cookie";
 import {
   CDropdown,
   CDropdownItem,
@@ -15,13 +14,13 @@ import BASE_URL from "src/base_url";
 const TheHeaderAdminDropdown = () => {
   const [picture, setPicture] = useState(" ");
   const [email, setEmail] = useState(" ");
-  const isLoggedIn = window.localStorage.getItem("loggedIn");
+
   useEffect(async () => {
     fetchData();
   }, []);
   const fetchData = async () => {
     const userId = window.localStorage.getItem("userId");
-    const token = Cookies.get("token");
+    const token = localStorage.getItem("token");
     const config = {
       headers: {
         "Content-Type": "application/json",

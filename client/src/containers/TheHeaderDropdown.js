@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Redirect } from "react-router-dom";
+
 import axios from "axios";
-import Cookies from "js-cookie";
+
 import {
   CDropdown,
   CDropdownItem,
@@ -21,7 +21,7 @@ const TheHeaderDropdown = () => {
   }, []);
   const fetchData = async () => {
     const userId = window.localStorage.getItem("userId");
-    const token = Cookies.get("token");
+    const token = localStorage.getItem("token");
     const config = {
       headers: {
         "Content-Type": "application/json",

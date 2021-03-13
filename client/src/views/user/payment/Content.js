@@ -4,7 +4,6 @@ import * as moment from "moment";
 
 import { WalletContext } from "../../../pageContext";
 import axios from "axios";
-import Cookies from "js-cookie";
 import "../../style.css";
 import mini from "../../../assets/icons/mini-logo.png";
 import BASE_URL from "src/base_url";
@@ -55,7 +54,7 @@ export default function Content() {
       });
   };
   if (isLoggedIn === null) {
-    return <Redirect to="/login" />;
+    return <Redirect to="/" />;
   }
   return (
     <div className="body-content">
