@@ -71,8 +71,10 @@ const Login = () => {
             return history.push("/dashboard/user/user-credentials");
           }
           if (response.data.user.role === "admin") {
+            window.location.reload();
             return history.push("/dashboard/admin");
           } else if (response.data.user.role === "user") {
+            window.location.reload();
             return history.push("/dashboard/user");
           }
         } else if (!response.data.success) {
