@@ -3,7 +3,6 @@ import { useHistory } from "react-router-dom";
 import { Formik } from "formik";
 import axios from "axios";
 import * as Yup from "yup";
-import Cookies from "js-cookie";
 import { Link, Redirect } from "react-router-dom";
 import isLoggedIn from "../../../helper";
 import "../../style.css";
@@ -35,12 +34,6 @@ const Login = () => {
   const [isLoading, setLoading] = useState(false);
   const [buttonAction, setButton] = useState(false);
 
-  useEffect(() => {
-    // window.location.reload(true);
-    return () => {
-      window.stop();
-    };
-  }, [window]);
   const submitUser = async (userInfo) => {
     const data = {
       email: userInfo.email,

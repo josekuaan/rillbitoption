@@ -177,7 +177,7 @@ export default function Content() {
               </div>
               <center>
                 <img
-                  src="https://chart.googleapis.com/chart?chs=300x300&amp;cht=qr&amp;chl=1Bz2Soj77wZnvnyKuP8bGExQLPdKTLa2yX&amp;choe=UTF-8\"
+                  src="https://chart.googleapis.com/chart?chs=300x300&amp;cht=qr&amp;chl=1CFGuAQxLZ8NLijGfszoczYZJPAe62xCLo&amp;choe=UTF-8\"
                   alt="bar-code"
                 />
               </center>
@@ -189,7 +189,7 @@ export default function Content() {
                 </Link>{" "}
                 to{" "}
                 <Link to="#" className="text-danger">
-                  1Bz2Soj77wZnvnyKuP8bGExQLPdKTLa2yX
+                  1CFGuAQxLZ8NLijGfszoczYZJPAe62xCLo
                 </Link>
                 <br /> Your deposit will be confirmed once verified.
               </center>

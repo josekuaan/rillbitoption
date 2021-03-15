@@ -12,7 +12,7 @@ import {
   CBreadcrumbRouter,
 } from "@coreui/react";
 
-import './style.css'
+import "./style.css";
 // routes config
 import routes from "../routes";
 
@@ -48,7 +48,7 @@ const TheHeader = () => {
           style={{
             minWidth: "30px",
             height: "30px",
-            marginTop: "12px",
+            marginTop: "25px",
             marginLeft: "12px",
             backgroundColor: "white",
           }}
