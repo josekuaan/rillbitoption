@@ -56,7 +56,12 @@ export default function Invest() {
                 <hr />
                 <p>Tenure: 10 Day(s)</p>
                 <hr />
-                <Link to="https://wa.link/j7z95l" className="invest-link">
+                <Link
+                  to="https://wa.me/+447862205606"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="invest-link"
+                >
                   Invest Now
                 </Link>
               </div>
@@ -109,7 +114,12 @@ export default function Invest() {
                 <hr />
                 <p>Tenure: 10 Day(s)</p>
                 <hr />
-                <Link to="https://wa.link/j7z95l" className="invest-link">
+                <Link
+                  to="https://wa.me/+447862205606"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="invest-link"
+                >
                   Invest Now
                 </Link>
               </div>
@@ -162,7 +172,12 @@ export default function Invest() {
                 <hr />
                 <p>Tenure: 10 Day(s)</p>
                 <hr />
-                <Link to="https://wa.link/j7z95l" className="invest-link">
+                <Link
+                  to="https://wa.me/+447862205606"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="invest-link"
+                >
                   Invest Now
                 </Link>
               </div>
@@ -215,7 +230,12 @@ export default function Invest() {
                 <hr />
                 <p>Tenure: 10 Day(s)</p>
                 <hr />
-                <Link to="https://wa.link/j7z95l" className="invest-link">
+                <Link
+                  to="https://wa.me/+447862205606"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="invest-link"
+                >
                   Invest Now
                 </Link>
               </div>

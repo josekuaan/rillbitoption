@@ -253,9 +253,9 @@ const Login = () => {
                   <div>
                     <h2>Sign up</h2>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua.
+                      To make an investment with us simply choose the investment
+                      plan or click on register and you will be redirected to
+                      the registration page.
                     </p>
                     <Link to="/register">
                       <CButton

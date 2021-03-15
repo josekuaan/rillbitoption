@@ -52,9 +52,9 @@ const Dashboard = () => {
           });
       });
   };
-  // if (isLoggedIn === null) {
-  //   return <Redirect to="/" />;
-  // }
+  if (isLoggedIn === null) {
+    return <Redirect to="/" />;
+  }
   return (
     <>
       <div className="content">
