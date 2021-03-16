@@ -152,7 +152,7 @@ export default function Home() {
                         <span
                           style={{ fontFamily: "times new roman,times,serif" }}
                         >
-                          Who We Are?
+                          Introduction ?
                         </span>
                       </span>
                     </span>
@@ -183,7 +183,7 @@ export default function Home() {
                       >
                         Recognizing the importance of Bitcoin from the onset,
                         and understanding that the exchange is the most critical
-                        part of the cryptocurrency ecosystem, Mikhail Fridman
+                        part of the cryptocurrency ecosystem, James dyson
                         founded Rillbit Option to give people the means to
                         quickly and securely invest in the space. Since then,
                         the company has grown by leaps and bounds with hundreds

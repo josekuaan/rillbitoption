@@ -152,24 +152,8 @@ export default function Content() {
               <div className="col-md-6">
                 <strong>Use This For Bank Transfer</strong>
               </div>
-              <div className="col-md-6 bank-details">
-                <div>
-                  <strong>Acct No 12345678901</strong>
-                </div>
-                <div>
-                  <strong>Name </strong>
-                  <span>
-                    <strong>Ukachukwu ifeanyi</strong>
-                  </span>
-                </div>
-                <div>
-                  <strong>
-                    Bank <span>GTB Bank</span>
-                  </strong>
-                </div>
-              </div>
             </div>
-            <br />
+            {/* <br /> */}
             <br />
             <div className="">
               <div>
