@@ -84,7 +84,7 @@ const Withdraw = () => {
     console.log("okkkk", data);
     axios({
       method: "post",
-      url: `${BASE_URL}/api/investment/create/${userId}`,
+      url: `${BASE_URL}/api/investment/withdraw/${userId}`,
       data,
       headers: config.headers,
     }).then(function (response) {
@@ -105,7 +105,12 @@ const Withdraw = () => {
         return history.push("/dashboard/user/user-log");
       } else {
         setResponse(false);
-        setErr(response.data.msg);
+        Swal({
+          title: "failed!",
+          text: response.data.msg,
+          icon: "error",
+          button: "Ok",
+        });
         setTimeout(() => {
           setErr("");
           setLoading(false);

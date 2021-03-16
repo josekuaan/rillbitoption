@@ -43,13 +43,8 @@ const Register = () => {
     };
 
     axios
-      .post(
-        `${BASE_URL}/api/user/auth/register`,
-        data,
-        config
-      )
+      .post(`${BASE_URL}/api/user/auth/register`, data, config)
       .then(function (response) {
-        console.log("ok", response);
         if (response.data.success) {
           return history.push("/login");
         }
