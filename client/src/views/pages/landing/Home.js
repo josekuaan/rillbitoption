@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 
 import "./style.css";
+import Swipers from "./Swipers";
 
 export default function Home() {
-  const [scrolled, setScrolled] = React.useState(false);
   const handleScroll = () => {
     const offset = window.scrollY;
     let navbarId = document.getElementById("mainHeader");
@@ -1067,7 +1067,15 @@ export default function Home() {
         </div>
       </section>
       {/* FAQ Area End */}
+      <section id="counter">
+        <div className="heading-title2">
+          <center>
+            <h2 style={{ color: "black" }}>What Our Clients Say About us</h2>
+          </center>
+        </div>
 
+        <Swipers />
+      </section>
       <a
         href="https://wa.me/+447862205606"
         className="whatsapp_float"
