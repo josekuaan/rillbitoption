@@ -148,11 +148,7 @@ export default function Content() {
             <br />
             <br />
             <hr />
-            <div className="card-item row">
-              <div className="col-md-6">
-                <strong>Use This For Bank Transfer</strong>
-              </div>
-            </div>
+
             {/* <br /> */}
             <br />
             <div className="">
