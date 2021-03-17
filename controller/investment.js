@@ -76,9 +76,7 @@ exports.withdraw = async (req, res) => {
     return res
       .status(401)
       .json({ success: false, msg: `You are not eligible for withdrawal` });
-  console.log(withdraw.status);
-  console.log(withdraw);
-  return;
+
   const details = {
     amount: req.body.amount,
     method: req.body.method,
