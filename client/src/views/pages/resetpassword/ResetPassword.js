@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Redirect } from "react-router-dom";
+import { useHistory, Redirect } from "react-router-dom";
 import { Formik } from "formik";
 import axios from "axios";
 import * as Yup from "yup";
@@ -23,11 +23,11 @@ import CIcon from "@coreui/icons-react";
 import BASE_URL from "src/base_url";
 
 const Login = () => {
-  // const history = useHistory();
+  const history = useHistory();
 
   const [err, setError] = useState("");
   const [isLoading, setLoading] = useState(false);
-  const resettoken = location.pathname.split("/")[2];
+  const resettoken = history.location.pathname.split("/")[2];
 
   const submitUser = async (userInfo) => {
     const data = {
