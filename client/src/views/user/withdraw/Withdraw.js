@@ -88,6 +88,7 @@ const Withdraw = () => {
       data,
       headers: config.headers,
     }).then(function (response) {
+      console.log(response.data.msg);
       if (response.data.success) {
         setLoading(false);
         setButton(true);
@@ -105,6 +106,7 @@ const Withdraw = () => {
         return history.push("/dashboard/user/user-log");
       } else {
         setResponse(false);
+        console.log(response.data.msg);
         Swal({
           title: "Good job!",
           text: "Congrats! Your request was successful.",
