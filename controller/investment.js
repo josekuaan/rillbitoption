@@ -87,7 +87,7 @@ exports.withdraw = async (req, res) => {
     email: req.user.email,
     acct_details: req.body.details,
   };
-  console.log(details);
+
   const invest = await Invest.create(details);
   res.status(200).json({
     success: true,

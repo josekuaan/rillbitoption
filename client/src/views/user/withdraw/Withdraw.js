@@ -118,6 +118,8 @@ const Withdraw = () => {
           setLoading(false);
         }, 6000);
       }
+    }).catch( error=>{
+      console.log(error.response.data.msg)
     });
     if (isLoading) {
       setTimeout(() => {
