@@ -251,7 +251,7 @@ exports.resetPassword = async (req, res, next) => {
   });
 
   if (!user)
-    return res.status(400).json({ success: false, msg: "Invalid Token" });
+    return res.status(400).json({ success: false, msg: "Expied Token" });
 
   //Set new password
   user.password = req.body.password;
@@ -259,8 +259,12 @@ exports.resetPassword = async (req, res, next) => {
   user.resetPasswordExpire = undefined;
 
   //save user new password
-  user.save({ validateBeforeSave: false });
-  sendTokenResponse(user, 200, res);
+  user.save({ validateBeforeSave: false }).select("+password");
+  if (user) {
+    return res
+      .status(200)
+      .json({ success: true, msg: `Password changed succefully` });
+  }
 };
 
 //@desc    Post forgot password
