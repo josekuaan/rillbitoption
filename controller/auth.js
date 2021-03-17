@@ -241,6 +241,7 @@ exports.deleteUser = async (req, res, next) => {
 //@access  Public
 
 exports.resetPassword = async (req, res, next) => {
+  console.llog(req.params.resettoken);
   let resetPasswordToken = await crypto
     .createHash("sha256")
     .update(req.params.resettoken)
