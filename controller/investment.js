@@ -68,7 +68,7 @@ exports.withdraw = async (req, res) => {
 
   if (!user)
     return res.status(401).json({ success: false, msg: `Could not find user` });
-  const withdraw = await Invest.find({ userId: req.params.id })
+  const withdraw = await Invest.findOne({ userId: req.params.id })
     .sort({ _id: -1 })
     .limit(1);
 
@@ -76,6 +76,7 @@ exports.withdraw = async (req, res) => {
     return res
       .status(401)
       .json({ success: false, msg: `You are not eligible for withdrawal` });
+  console.log(withdraw.status);
   console.log(withdraw);
   return;
   const details = {
