@@ -241,10 +241,9 @@ exports.deleteUser = async (req, res, next) => {
 //@access  Public
 
 exports.resetPassword = async (req, res, next) => {
-  console.log(req.params);
   let resetPasswordToken = await crypto
     .createHash("sha256")
-    .update(req.params.resettoken)
+    .update(req.params.id)
     .digest("hex");
   let user = await User.findOne({
     resetPasswordToken,
