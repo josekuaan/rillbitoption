@@ -259,7 +259,7 @@ exports.resetPassword = async (req, res, next) => {
   user.resetPasswordExpire = undefined;
 
   //save user new password
-  user.save({ validateBeforeSave: false }).select("+password");
+  user.save({ validateBeforeSave: false });
   console.log(user);
   if (user) {
     return res
