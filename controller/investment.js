@@ -76,10 +76,12 @@ exports.withdraw = async (req, res) => {
     return res
       .status(401)
       .json({ success: false, msg: `You are not eligible for withdrawal` });
+  console.log(withdraw.status);
+  return;
   const details = {
     amount: req.body.amount,
     method: req.body.method,
-    type: req.bocy.type,
+    type: req.body.type,
     txn_id: req.body.txn.split("-")[0],
     userId: req.params.id,
     name: req.user.fullName,
@@ -133,7 +135,6 @@ exports.submit = async (req, res) => {
     // Convert doller to bitcoin
     dollarWorthInBitcoin = currentbtcPrice;
   } else if (type === "withdraw") {
-    console.log("okok");
     dollarWorthInBitcoin = req.body.amount;
   }
 
@@ -146,7 +147,7 @@ exports.submit = async (req, res) => {
     userId: req.params.id,
     name: req.user.fullName,
     email: req.user.email,
-    acct_details: req.body.details,
+    acct_details: req.body.details === undefined ? "" : req.body.details,
   };
   console.log(details);
   const invest = await Invest.create(details);
@@ -239,21 +240,17 @@ exports.uploadUserPayment = async (req, res, next) => {
   const user = await User.findById(req.user.id);
 
   if (!user)
-    return res
-      .status(401)
-      .json({
-        success: false,
-        msg: `user with id of ${req.params.id} not found`,
-      });
+    return res.status(401).json({
+      success: false,
+      msg: `user with id of ${req.params.id} not found`,
+    });
 
   // Make sure the owner of bootcamp id the only person to update bootcamp
   if (user._id.toString() !== req.user.id) {
-    return res
-      .status(401)
-      .json({
-        success: false,
-        msg: `This user is not authorize to modify this account`,
-      });
+    return res.status(401).json({
+      success: false,
+      msg: `This user is not authorize to modify this account`,
+    });
   }
   if (!req.files)
     return res
@@ -273,12 +270,10 @@ exports.uploadUserPayment = async (req, res, next) => {
     file.size > process.env.MAX_FILE_UPLOAD &&
     file2.size > process.env.MAX_FILE_UPLOAD
   )
-    return res
-      .status(400)
-      .json({
-        success: false,
-        msg: `Upload image less than ${process.env.MAX_FILE_UPLOAD}`,
-      });
+    return res.status(400).json({
+      success: false,
+      msg: `Upload image less than ${process.env.MAX_FILE_UPLOAD}`,
+    });
 
   //Create a customer file name
   file.name = `photo_${req.params.id}${path.parse(file.name).ext}`;
@@ -328,12 +323,10 @@ exports.deleteInvestment = async (req, res, next) => {
   let invest = await Invest.findById(req.params.id);
 
   if (!invest)
-    return res
-      .status(200)
-      .json({
-        success: true,
-        msg: `user with id of ${req.params.id} not found`,
-      });
+    return res.status(200).json({
+      success: true,
+      msg: `user with id of ${req.params.id} not found`,
+    });
   invest = await invest.remove();
   invest = {
     withdrawable: invest.withdrawable,

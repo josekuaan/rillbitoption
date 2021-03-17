@@ -1073,7 +1073,6 @@ export default function Home() {
             <h2 style={{ color: "black" }}>What Our Clients Say About us</h2>
           </center>
         </div>
-
         <Swipers />
       </section>
       <a
