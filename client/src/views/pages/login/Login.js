@@ -194,7 +194,7 @@ const Login = () => {
                               </CInputGroupText>
                             </CInputGroupPrepend>
                             <CInput
-                              type="password"
+                              type={values.showPassword ? "text" : "password"}
                               placeholder="Password"
                               autoComplete="current-password"
                               id="password"
@@ -205,7 +205,7 @@ const Login = () => {
                               className={
                                 errors.password && touched.password
                                   ? "form-control error"
-                                  : "form-control"
+                                  : "form-control rounded-0"
                               }
                             />
                             {errors.password && touched.password && (
