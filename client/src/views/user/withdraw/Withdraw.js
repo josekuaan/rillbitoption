@@ -87,40 +87,42 @@ const Withdraw = () => {
       url: `${BASE_URL}/api/investment/withdraw/${userId}`,
       data,
       headers: config.headers,
-    }).then(function (response) {
-      console.log(response.data.msg);
-      if (response.data.success) {
-        setLoading(false);
-        setButton(true);
-        setCatLog([...catLog, response.data.invest]);
-        setPayment(response.data.invest);
-        Swal({
-          title: "Good job!",
-          text: "Congrats! Your request was successful.",
-          icon: "success",
-          button: "Ok",
-        });
-        setTimeout(() => {
-          setResponse(null);
-        }, 6000);
-        return history.push("/dashboard/user/user-log");
-      } else {
-        setResponse(false);
+    })
+      .then(function (response) {
         console.log(response.data.msg);
+        if (response.data.success) {
+          setLoading(false);
+          setButton(true);
+          setCatLog([...catLog, response.data.invest]);
+          setPayment(response.data.invest);
+          Swal({
+            title: "Good job!",
+            text: "Congrats! Your request was successful.",
+            icon: "success",
+            button: "Ok",
+          });
+          setTimeout(() => {
+            setResponse(null);
+          }, 6000);
+          return history.push("/dashboard/user/user-log");
+        } else {
+          setResponse(false);
+
+          setTimeout(() => {
+            setErr("");
+            setLoading(false);
+          }, 6000);
+        }
+      })
+      .catch((error) => {
         Swal({
-          title: "Good job!",
-          text: "Congrats! Your request was successful.",
-          icon: "success",
+          title: "Failed!",
+          text: error.response.data.msg,
+          icon: "error",
           button: "Ok",
         });
-        setTimeout(() => {
-          setErr("");
-          setLoading(false);
-        }, 6000);
-      }
-    }).catch( error=>{
-      console.log(error.response.data.msg)
-    });
+        console.log();
+      });
     if (isLoading) {
       setTimeout(() => {
         setLoading(!isLoading);
