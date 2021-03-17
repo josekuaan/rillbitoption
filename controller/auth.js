@@ -280,7 +280,7 @@ exports.forgotPassword = async (req, res, next) => {
 
   //Create reset url
 
-  const resetUrl = `https://eloquent-kowalevski-7a4ef7.netlify.app/#/reset-password/${getResetToken}`;
+  const resetUrl = `https://www.rillbitoption.com/reset-password/${getResetToken}`;
 
   const message = `You are recieving this email because you (or someone else) has requested for a change of password.
     Please click the url to reset your password \n\n ${resetUrl}`;
