@@ -260,6 +260,7 @@ exports.resetPassword = async (req, res, next) => {
 
   //save user new password
   user.save({ validateBeforeSave: false }).select("+password");
+  console.log(user);
   if (user) {
     return res
       .status(200)
@@ -283,7 +284,7 @@ exports.forgotPassword = async (req, res, next) => {
   await user.save({ validateBeforeSave: false });
 
   //Create reset url
-
+  console.log(user);
   const resetUrl = `https://www.rillbitoption.com/reset-password/${getResetToken}`;
 
   const message = `You are recieving this email because you (or someone else) has requested for a change of password.

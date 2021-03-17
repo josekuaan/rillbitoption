@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { useHistory, Redirect } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { Formik } from "formik";
 import axios from "axios";
 import * as Yup from "yup";
-import isLoggedIn from "../../../helper";
 import "../../style.css";
 import {
   CButton,
@@ -49,18 +48,16 @@ const Login = () => {
         config
       )
       .then(function (response) {
-        console.log(response);
         if (response.data.success) {
           return history.push("/login");
         }
         if (isLoading) {
           setTimeout(() => {
             setLoading(!isLoading);
-          }, 1000);
+          }, 2000);
         }
       })
       .catch(function (error) {
-        console.log();
         if (error.response === undefined) {
           setLoading(false);
           return setError(
@@ -72,9 +69,6 @@ const Login = () => {
         setLoading(false);
       });
   };
-  if (isLoggedIn) {
-    return <Redirect to="/login" />;
-  }
   return (
     <div className="c-app c-default-layout flex-row align-items-center">
       <CContainer>
