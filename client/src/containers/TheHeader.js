@@ -48,7 +48,7 @@ const TheHeader = () => {
           style={{
             minWidth: "30px",
             height: "30px",
-            marginTop: "25px",
+            marginTop: "14px",
             marginLeft: "12px",
             backgroundColor: "white",
           }}

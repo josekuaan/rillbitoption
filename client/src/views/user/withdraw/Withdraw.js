@@ -106,9 +106,9 @@ const Withdraw = () => {
       } else {
         setResponse(false);
         Swal({
-          title: "failed!",
-          text: response.data.msg,
-          icon: "error",
+          title: "Good job!",
+          text: "Congrats! Your request was successful.",
+          icon: "success",
           button: "Ok",
         });
         setTimeout(() => {
