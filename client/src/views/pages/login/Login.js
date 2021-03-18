@@ -202,11 +202,7 @@ const Login = () => {
                               onChange={handleChange}
                               onBlur={handleBlur}
                               onReset={handleReset}
-                              className={
-                                errors.password && touched.password
-                                  ? "form-control error"
-                                  : "form-control rounded-0"
-                              }
+                              className="form-control rounded-0"
                             />
                             {errors.password && touched.password && (
                               <div

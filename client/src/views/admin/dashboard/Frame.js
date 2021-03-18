@@ -58,7 +58,7 @@ export default function Frame() {
         >
           ©
         </Link>
-        &nbsp;E-Capital Option
+        &nbsp;Rillbit Option
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ export default function Invest() {
             >
               <div className="header-title">
                 <h4>Gold</h4>
-                <p>E-Capital Option Investment Plan</p>
+                <p>Rillbit Option Investment Plan</p>
               </div>
             </div>
             <div className="cont">
@@ -38,7 +38,7 @@ export default function Invest() {
                   <i className="ti-bar-chart"></i>
                 </span>
                 <span>form</span>
-                <h3 style={{ margin: "0 0" }}>$ 1000</h3>
+                <h3 style={{ margin: "0 0" }}> 100€</h3>
                 <p style={{ margin: "0 0" }}>ex VAT</p>
                 <p style={{ marginTop: 0 }}>(ROI Capped at 75%)</p>
               </div>
@@ -50,7 +50,7 @@ export default function Invest() {
                   color: "#999",
                 }}
               >
-                <p>Maximum Investment: $ 2500</p>
+                <p>Maximum Investment:100€</p>
                 <hr />
                 <p>ROI Cycle: Daily</p>
                 <hr />
@@ -77,7 +77,7 @@ export default function Invest() {
             >
               <div className="header-title">
                 <h4>Daimond</h4>
-                <p>E-Capital Option Investment Plan</p>
+                <p>Rillbit Option Investment Plan</p>
               </div>
             </div>
             <div className="cont">
@@ -96,7 +96,7 @@ export default function Invest() {
                   <i className="ti-bar-chart"></i>
                 </span>
                 <span>form</span>
-                <h3 style={{ margin: "0 0" }}>$ 1000</h3>
+                <h3 style={{ margin: "0 0" }}>1,000€</h3>
                 <p style={{ margin: "0 0" }}>ex VAT</p>
                 <p style={{ marginTop: 0 }}>(ROI Capped at 75%)</p>
               </div>
@@ -108,7 +108,7 @@ export default function Invest() {
                   color: "#999",
                 }}
               >
-                <p>Maximum Investment: $ 2500</p>
+                <p>Maximum Investment: 1,000€</p>
                 <hr />
                 <p>ROI Cycle: Daily</p>
                 <hr />
@@ -135,7 +135,7 @@ export default function Invest() {
             >
               <div className="header-title">
                 <h4>Platinum</h4>
-                <p>E-Capital Option Investment Plan</p>
+                <p>Rillbit Option Investment Plan</p>
               </div>
             </div>
             <div className="cont">
@@ -154,7 +154,7 @@ export default function Invest() {
                   <i className="ti-bar-chart"></i>
                 </span>
                 <span>form</span>
-                <h3 style={{ margin: "0 0" }}>$ 1000</h3>
+                <h3 style={{ margin: "0 0" }}>10,000€</h3>
                 <p style={{ margin: "0 0" }}>ex VAT</p>
                 <p style={{ marginTop: 0 }}>(ROI Capped at 75%)</p>
               </div>
@@ -166,7 +166,7 @@ export default function Invest() {
                   color: "#999",
                 }}
               >
-                <p>Maximum Investment: $ 2500</p>
+                <p>Maximum Investment: 10,000€</p>
                 <hr />
                 <p>ROI Cycle: Daily</p>
                 <hr />
@@ -193,7 +193,7 @@ export default function Invest() {
             >
               <div className="header-title">
                 <h4>VIP</h4>
-                <p>E-Capital Option Investment Plan</p>
+                <p>Rillbit Option Investment Plan</p>
               </div>
             </div>
             <div className="cont">
@@ -212,7 +212,7 @@ export default function Invest() {
                   <i className="ti-bar-chart"></i>
                 </span>
                 <span>form</span>
-                <h3 style={{ margin: "0 0" }}>$ 1000</h3>
+                <h3 style={{ margin: "0 0" }}>100,000€</h3>
                 <p style={{ margin: "0 0" }}>ex VAT</p>
                 <p style={{ marginTop: 0 }}>(ROI Capped at 75%)</p>
               </div>
@@ -224,7 +224,7 @@ export default function Invest() {
                   color: "#999",
                 }}
               >
-                <p>Maximum Investment: $ 2500</p>
+                <p>Maximum Investment: 100,000€</p>
                 <hr />
                 <p>ROI Cycle: Daily</p>
                 <hr />
