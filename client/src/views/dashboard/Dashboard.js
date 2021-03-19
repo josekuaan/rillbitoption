@@ -136,9 +136,9 @@ const Dashboard = () => {
                       >
                         {EditAccount.length == 0 ||
                         EditAccount === undefined ? (
-                          <span>$0.00</span>
+                          <span>0.00€</span>
                         ) : (
-                          <span>${EditAccount[0].interest}</span>
+                          <span>{EditAccount[0].interest}€</span>
                         )}
                       </Link>
                       <div className="balance">
@@ -208,9 +208,9 @@ const Dashboard = () => {
                         </small>
                         {EditAccount === undefined ||
                         EditAccount.length === 0 ? (
-                          <span>$0.00</span>
+                          <span>0.00€</span>
                         ) : (
-                          <span>${EditAccount[0].amount}</span>
+                          <span>{EditAccount[0].amount}€</span>
                         )}
                       </div>
 
@@ -232,9 +232,9 @@ const Dashboard = () => {
                         </small>{" "}
                         {EditAccount === undefined ||
                         EditAccount.length === 0 ? (
-                          <span>$0.00</span>
+                          <span>0.00€</span>
                         ) : (
-                          <span>${EditAccount[0].withdrawable}</span>
+                          <span>{EditAccount[0].withdrawable}€</span>
                         )}
                       </div>
 

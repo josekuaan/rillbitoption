@@ -133,12 +133,11 @@ const Dashboard = () => {
                         className="interest"
                         style={{ color: "#fff" }}
                       >
-                        $
                         {creditAccount.length == 0 ? (
-                          <span>0.00</span>
+                          <span>0.00€</span>
                         ) : (
                           `${creditAccount.map((credit, index) => (
-                            <span key={index}>{credit.interest}</span>
+                            <span key={index}>{credit.interest}€</span>
                           ))}`
                         )}
                       </Link>
@@ -206,13 +205,12 @@ const Dashboard = () => {
                       <div className="balance">
                         <small>
                           <i className="fas fa-long-arrow-alt-down"></i>
-                        </small>
-                        ${" "}
+                        </small>{" "}
                         {creditAccount.length == 0 ? (
-                          <span>0.00</span>
+                          <span>0.00€</span>
                         ) : (
                           `${creditAccount.map((credit, index) => (
-                            <span key={index}>{credit.wallet}</span>
+                            <span key={index}>{credit.wallet}€</span>
                           ))}`
                         )}
                       </div>
@@ -232,13 +230,12 @@ const Dashboard = () => {
                       <div className="withdraw">
                         <small>
                           <i className="fas fa-long-arrow-alt-down"></i>
-                        </small>
-                        ${" "}
+                        </small>{" "}
                         {creditAccount.length == 0 ? (
-                          <span>0.00</span>
+                          <span>0.00€</span>
                         ) : (
                           `${creditAccount.map((credit, index) => (
-                            <span key={index}>{credit.withdrawable}</span>
+                            <span key={index}>{credit.withdrawable}€</span>
                           ))}`
                         )}
                       </div>

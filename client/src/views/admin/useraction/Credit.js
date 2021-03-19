@@ -105,11 +105,11 @@ export default function Credit() {
               <div className="work-progress">
                 <span>Main Balance</span>
                 <span>
-                  ${" "}
+                  {" "}
                   {creditAccount === null ? (
-                    <span>0.00</span>
+                    <span>0.00€</span>
                   ) : (
-                    <span>{creditAccount.wallet}</span>
+                    <span>{creditAccount.wallet}€</span>
                   )}
                 </span>
               </div>
@@ -117,11 +117,11 @@ export default function Credit() {
               <div className="work-progress">
                 <span>Withdrawable Balance</span>
                 <span>
-                  ${" "}
+                  {" "}
                   {creditAccount === null ? (
-                    <span>0.00</span>
+                    <span>0.00€</span>
                   ) : (
-                    <span>{creditAccount.withdrawable}</span>
+                    <span>{creditAccount.withdrawable}€</span>
                   )}
                 </span>
               </div>
@@ -129,11 +129,11 @@ export default function Credit() {
               <div className="work-progress">
                 <span>Total ROI</span>
                 <span>
-                  ${" "}
+                  {" "}
                   {creditAccount === null ? (
-                    <span>0.00</span>
+                    <span>0.00€</span>
                   ) : (
-                    <span>{creditAccount.interest}</span>
+                    <span>{creditAccount.interest}€</span>
                   )}
                 </span>
               </div>

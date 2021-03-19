@@ -56,14 +56,14 @@ export default function Invest() {
                 <hr />
                 <p>Tenure: 10 Day(s)</p>
                 <hr />
-                <Link
-                  to="https://wa.me/+447862205606"
+                <a
+                  href="https://wa.me/+447862205606"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="invest-link"
                 >
                   Invest Now
-                </Link>
+                </a>
               </div>
             </div>
           </div>{" "}
@@ -114,14 +114,14 @@ export default function Invest() {
                 <hr />
                 <p>Tenure: 10 Day(s)</p>
                 <hr />
-                <Link
-                  to="https://wa.me/+447862205606"
+                <a
+                  href="https://wa.me/+447862205606"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="invest-link"
                 >
                   Invest Now
-                </Link>
+                </a>
               </div>
             </div>
           </div>{" "}
@@ -172,14 +172,14 @@ export default function Invest() {
                 <hr />
                 <p>Tenure: 10 Day(s)</p>
                 <hr />
-                <Link
-                  to="https://wa.me/+447862205606"
+                <a
+                  href="https://wa.me/+447862205606"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="invest-link"
                 >
                   Invest Now
-                </Link>
+                </a>
               </div>
             </div>
           </div>{" "}
@@ -230,14 +230,14 @@ export default function Invest() {
                 <hr />
                 <p>Tenure: 10 Day(s)</p>
                 <hr />
-                <Link
-                  to="https://wa.me/+447862205606"
+                <a
+                  href="https://wa.me/+447862205606"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="invest-link"
                 >
                   Invest Now
-                </Link>
+                </a>
               </div>
             </div>
           </div>{" "}

@@ -125,11 +125,11 @@ export default function EditUser() {
               <div className="work-progress">
                 <span>Main Balance</span>
                 <span>
-                  ${" "}
+                  {" "}
                   {EditAccount.length === 0 ? (
-                    <span>0.00</span>
+                    <span>0.00€</span>
                   ) : (
-                    <span>{EditAccount[0].wallet}</span>
+                    <span>{EditAccount[0].wallet}€</span>
                   )}
                 </span>
               </div>
@@ -137,11 +137,11 @@ export default function EditUser() {
               <div className="work-progress">
                 <span>Withdrawable Balance</span>
                 <span>
-                  ${" "}
+                  {" "}
                   {EditAccount.length === 0 ? (
-                    <span>0.00</span>
+                    <span>0.00€</span>
                   ) : (
-                    <span>{EditAccount[0].withdrawable}</span>
+                    <span>{EditAccount[0].withdrawable}€</span>
                   )}
                 </span>
               </div>
@@ -149,11 +149,11 @@ export default function EditUser() {
               <div className="work-progress">
                 <span>Total ROI</span>
                 <span>
-                  ${" "}
+                  {" "}
                   {EditAccount.length === 0 ? (
-                    <span>0.00</span>
+                    <span>0.00€</span>
                   ) : (
-                    <span>{EditAccount[0].interest}</span>
+                    <span>{EditAccount[0].interest}€</span>
                   )}
                 </span>
               </div>
