@@ -174,27 +174,27 @@ export default function Content() {
               <div className="work-progress">
                 <span>MAIN BALANCE</span>
                 {EditAccount === undefined || EditAccount.length === 0 ? (
-                  <span>$0.00</span>
+                  <span>0.00€</span>
                 ) : (
-                  <span>${EditAccount[0].amount}</span>
+                  <span>{EditAccount[0].amount}€</span>
                 )}
               </div>
               <br />
               <div className="work-progress">
                 <span>DEPOSIT BALANCE</span>
                 {EditAccount === undefined || EditAccount.length === 0 ? (
-                  <span>$0.00</span>
+                  <span>0.00€</span>
                 ) : (
-                  <span>${EditAccount[0].withdrawable}</span>
+                  <span>{EditAccount[0].withdrawable}€</span>
                 )}
               </div>
               <br />
               <div className="work-progress">
                 <span>PROFIT</span>
                 {EditAccount === undefined || EditAccount.length === 0 ? (
-                  <span>$0.00</span>
+                  <span>0.00€</span>
                 ) : (
-                  <span>${EditAccount[0].interest}</span>
+                  <span>{EditAccount[0].interest}€</span>
                 )}
               </div>
               <br />
