@@ -76,10 +76,6 @@ export default function Content() {
           </div>
           <div className="card-content">
             <div className="card-item">
-              <div>INVOICED FROM</div>
-              <div>INVOICED TO</div>
-            </div>
-            <div className="card-item">
               <div>
                 <strong>My name</strong>
               </div>
