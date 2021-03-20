@@ -119,21 +119,21 @@ export default function Content() {
             <div className="card-item">
               <div>Deposit Amount</div>
               <div>
-                <strong>${payment === undefined ? "" : payment.amount}</strong>
+                <strong>{payment === undefined ? "" : payment.amount}€</strong>
               </div>
             </div>
             <hr />
             <div className="card-item">
               <div>Gateway Charge</div>
               <div>
-                <strong>$ 0.0</strong>
+                <strong> 0.0€</strong>
               </div>
             </div>
             <hr />
             <div className="card-item">
               <div>Total amount due</div>
               <div>
-                <strong>${payment === undefined ? "" : payment.amount}</strong>
+                <strong>{payment === undefined ? "" : payment.amount}€</strong>
               </div>
             </div>
             <hr />

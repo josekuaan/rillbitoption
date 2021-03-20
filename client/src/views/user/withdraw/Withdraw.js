@@ -174,7 +174,7 @@ const Withdraw = () => {
                             id="disabled-input"
                             name="disabled-input"
                             onChange={(e) => setAount(e.target.value)}
-                            value={`$${amount === "000" ? "0.00" : amount}`}
+                            value={`${amount === "000" ? "0.00" : amount}€`}
                             disabled
                           />
                         </CFormGroup>

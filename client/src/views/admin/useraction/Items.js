@@ -76,7 +76,7 @@ export default function Items() {
           <td>{`${lo.name}`}</td>
           <td>{`${lo.email}`}</td>
           <td>{`${lo.method}`}</td>
-          <td>{`${lo.amount}`}</td>
+          <td>{`${lo.amount}€`}</td>
           <td>{`${lo.type}`}</td>
           <td>{moment(`${lo.createdAt}`).format("DD/ MM /YYYY")}</td>
           <td style={{ padding: "0rem" }}>
