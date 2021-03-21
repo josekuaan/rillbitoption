@@ -31,8 +31,8 @@ exports.send = async (req, res) => {
   });
 
   const mailData = {
-    from: "no-reply <support@rillbitoption.com>", // sender address
-    to: email, // list of receivers
+    from: email, // sender address
+    to: "support@rillbitoption.com", // list of receivers
     subject: subject,
     text: "",
     html: `<p>${message}</p>`,
