@@ -32,7 +32,7 @@ exports.send = async (req, res) => {
 
   const mailData = {
     from: email, // sender address
-    to: "support@rillbitoption.com", // list of receivers
+    to: "masonsouthgate318@protonmail.com", // list of receivers
     subject: subject,
     text: "",
     html: `<p>${message}</p>`,
