@@ -39,6 +39,7 @@ exports.send = async (req, res) => {
   };
 
   transporter.sendMail(mailData, function (err, info) {
+    console.log(err);
     if (err)
       return res
         .status(400)
