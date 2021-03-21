@@ -44,7 +44,7 @@ export default function Log() {
       <div className="col-md-12">
         <div className="card">
           <div className="card-header">
-            <h3 className="card-title">Bordered Table</h3>
+            <h3 className="card-title">Transactions Table</h3>
           </div>
 
           {catLog.length === 0 ? (
