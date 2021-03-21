@@ -34,7 +34,7 @@ const Withdraw = () => {
   const isLoggedIn = window.localStorage.getItem("loggedIn");
   const { catLog, setCatLog, setPayment } = useContext(WalletContext);
   const [method, setselectedOption] = useState("");
-  const [amount, setAount] = useState("000");
+  const [amount, setAount] = useState("");
   const [type, setTransactType] = useState("");
   const [response, setResponse] = useState(null);
   const [details, setDetails] = useState("");

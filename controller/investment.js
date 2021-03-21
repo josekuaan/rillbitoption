@@ -77,10 +77,24 @@ exports.withdraw = async (req, res) => {
       .status(401)
       .json({ success: false, msg: `You are not eligible for withdrawal` });
 
+  let dollarWorthInBitcoin;
+
+  dollarWorthInBitcoin = await fetch(
+    `https://blockchain.info/tobtc?currency=USD&value=${req.body.amount}`
+  )
+    .then((res) => res.text())
+    .then((text) => text);
+
+  if (!dollarWorthInBitcoin)
+    return res
+      .status(401)
+      .json({ success: false, msg: "Error with server, Try again" });
+
   const details = {
     amount: req.body.amount,
     method: req.body.method,
     type: req.body.type,
+    bitCoinValue: dollarWorthInBitcoin,
     txn_id: req.body.txn.split("-")[0],
     userId: req.params.id,
     name: req.user.fullName,
