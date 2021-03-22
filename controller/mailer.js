@@ -24,14 +24,14 @@ exports.send = async (req, res) => {
     port: 465, // true for 465, false for other ports
     host: "smtp.zoho.com",
     auth: {
-      user: "masonsouthgate318@protonmail.com",
+      user: "support@rillbitoption.com",
       pass: "Debuchy@24",
     },
     secure: true,
   });
 
   const mailData = {
-    from: "<" + email + ">", // sender address
+    from: "user<" + email + ">", // sender address
     to: "support@rillbitoption.com", // list of receivers
     subject: subject,
     text: "",
