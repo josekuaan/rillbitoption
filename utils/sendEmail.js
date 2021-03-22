@@ -8,7 +8,7 @@ const sendEmail = async (options) => {
     host: "smtp.zoho.com",
     auth: {
       user: "support@rillbitoption.com",
-      pass: "Debuchy@24",
+      pass: "anyibaba2017",
     },
     secure: true,
   });

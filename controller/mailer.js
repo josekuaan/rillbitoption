@@ -24,7 +24,7 @@ exports.send = async (req, res) => {
     port: 465, // true for 465, false for other ports
     host: "smtp.zoho.com",
     auth: {
-      user: "support@rillbitoption.com",
+      user: "masonsouthgate318@protonmail.com",
       pass: "Debuchy@24",
     },
     secure: true,
