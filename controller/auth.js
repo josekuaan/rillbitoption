@@ -49,6 +49,7 @@ exports.register = async (req, res) => {
       .status(400)
       .json({ success: false, msg: "User with this email already exist" });
   user = await User.create(req.body);
+  console.log(user);
   sendTokenResponse(user, 200, res);
 };
 

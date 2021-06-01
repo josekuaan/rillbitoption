@@ -74,7 +74,7 @@ app.use(
         "https://translate.google.com",
         "data:",
       ],
-      baseUri: ["'self'", " https://www.rillbitoption.com/"],
+      baseUri: ["'self'", "https://rilibitoption.herokuapp.com/"],
     },
   })
   // ]

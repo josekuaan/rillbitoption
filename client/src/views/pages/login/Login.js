@@ -55,7 +55,7 @@ const Login = () => {
           window.localStorage.setItem("userId", response.data.user._id);
           window.localStorage.setItem("loggedIn", true);
           window.localStorage.setItem("token", response.data.token);
-
+          console.log(response.data);
           setButton(true);
           // return
           if (
