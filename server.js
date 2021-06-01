@@ -34,7 +34,7 @@ app.use(
         "https://widget.coinlib.io",
         "https://coinlib.io",
         "https://ws.coinlib.io/socket.io",
-        " https://www.rillbitoption.com/",
+        "https://rilibitoption.herokuapp.com/",
         "https://translate.googleapis.com",
       ],
       frameSrc: ["'self'", "https://widget.coinlib.io", "https://coinlib.io"],
