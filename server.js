@@ -34,7 +34,7 @@ app.use(
         "https://widget.coinlib.io",
         "https://coinlib.io",
         "https://ws.coinlib.io/socket.io",
-        "https://rilibitoption.herokuapp.com/",
+        "https://www.rillbitoption.com/",
         "https://translate.googleapis.com",
       ],
       frameSrc: ["'self'", "https://widget.coinlib.io", "https://coinlib.io"],
@@ -74,7 +74,7 @@ app.use(
         "https://translate.google.com",
         "data:",
       ],
-      baseUri: ["'self'", "https://rilibitoption.herokuapp.com/"],
+      baseUri: ["'self'", "https://www.rillbitoption.com/"],
     },
   })
   // ]
