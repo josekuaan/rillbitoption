@@ -1,3 +1,3 @@
-const BASE_URL = "https://www.rillbitoption.com";
+const BASE_URL = "https://rillbitoption.herokuapp.com";
 
 export default BASE_URL;
